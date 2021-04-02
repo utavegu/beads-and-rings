@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+@font-face {
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+}
+  
+@font-face {
+	font-family: "PT Sans";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+}
+*/
+
+html {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f2f2f2; */
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+	font: inherit;
+  text-align: center;
+  text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	letter-spacing: 2px;
+
+	padding: 20px 20px;
+	border-radius: 3px;
+	min-width: 200px;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.button:hover {
+	opacity: 0.5;
+}
+
+.button:active {
+	opacity: 1;
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.button:focus {
+	outline: 1px dotted black;
+}
+
+.button:disabled {
+	background-color: #e5e5e5;
+}
+
+/* Прочие фокусы с картинками */
+/*
+.about-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+*/
