@@ -1,5 +1,74 @@
+.footer {
+  /* width: 320px; */
+  width: 100%;
+  margin: 0 auto;
+  background-color: lightcyan;
+  display: grid;
+}
+
+
+
+
+.navigation {
+  /* border: 1px dotted red; */
+}
+
+.nav_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.contacts {
+  /* border: 1px dotted blue; */
+}
+
+.social_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.social_item {
+  width: 36px;
+  height: 36px;
+  /*тут цвет в итоге убери, а самому футеру наоборот задай*/
+  background-color: black;
+  display: block;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 3px 0;
+}
+
+.social_item__vk {
+  background-image: url(../../img/icon-vk.svg);
+}
+
+.social_item__fb {
+  background-image: url(../../img/icon-fb.svg);
+}
+
+.social_item__inst {
+  background-image: url(../../img/icon-insta.svg);
+}
+
+
+
+.payment_ways {
+  /* border: 1px dotted green; */
+}
+
 .pay {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .pay_systems {
@@ -34,25 +103,33 @@
   background-position: -52px -46px;
 }
 
-.social_links {
-  margin-top: 10px;
+
+.copyright {
+  /* border: 1px dotted yellow; */
+  text-align: center;
 }
 
-.social_link {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  margin: 0 5px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-image: url("../../img/footer-sprite.png");
-  cursor: pointer;
+
+
+
+
+@media (min-width: 768px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav_list {
+    flex-direction: column;
+  }
+
+  .nav_item {
+    margin: 10px;
+  }
 }
 
-.social_link__twitter {
-  background-position: -107px -42px;
-}
-
-.social_link__vk {
-  background-position: -157px -42px;
+@media (min-width: 1200px) {
+  .footer {
+    width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

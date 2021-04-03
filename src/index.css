@@ -30,7 +30,8 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  /* background-color: #f2f2f2; */
+  /*УДАЛИТЬ*/
+  background-color: #f2f2f2;
 }
 
 a {
@@ -53,11 +54,6 @@ img {
   clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
-}
-
-.container {
-  width: 1440px;
-  margin: 0 auto;
 }
 
 .button {
@@ -94,13 +90,3 @@ img {
 .button:disabled {
 	background-color: #e5e5e5;
 }
-
-/* Прочие фокусы с картинками */
-/*
-.about-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-*/
