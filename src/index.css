@@ -30,8 +30,15 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  /*УДАЛИТЬ*/
-  background-color: #f2f2f2;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image: url(./img/textile-2918844_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* image-rendering: pixelated; */
+  }
 }
 
 a {

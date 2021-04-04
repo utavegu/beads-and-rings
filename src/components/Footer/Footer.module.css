@@ -1,9 +1,12 @@
 .footer {
-  /* width: 320px; */
   width: 100%;
+  min-width: 320px;
   margin: 0 auto;
-  background-color: lightcyan;
+  background-color: darkolivegreen;
+  color: wheat;
   display: grid;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 
@@ -25,6 +28,16 @@
 
 .contacts {
   /* border: 1px dotted blue; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+}
+
+.contacts > * {
+  margin-right: 10px;
+  min-width: 200px;
 }
 
 .social_list {
@@ -39,9 +52,8 @@
 .social_item {
   width: 36px;
   height: 36px;
-  /*тут цвет в итоге убери, а самому футеру наоборот задай*/
-  background-color: black;
   display: block;
+  background-color: burlywood;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
@@ -66,6 +78,10 @@
   /* border: 1px dotted green; */
 }
 
+.payment_header {
+  text-align: center;
+}
+
 .pay {
   display: flex;
   justify-content: space-evenly;
@@ -76,7 +92,7 @@
   height: 28px;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
-  background-image: url("../../img/footer-sprite.png");
+  background-image: url(../../img/footer-sprite.png);
 }
 
 .pay_systems__paypal {
@@ -124,6 +140,10 @@
 
   .nav_item {
     margin: 10px;
+  }
+
+  .contacts {
+    display: block;
   }
 }
 

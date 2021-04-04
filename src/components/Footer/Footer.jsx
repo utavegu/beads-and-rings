@@ -6,6 +6,7 @@ export default function Footer() {
     <footer className={s.footer}>
 
         <section className={s.navigation}>
+          {/* Потом оценишь вложенность и поменяешь на нужную цифру */}
           <h5 className="visually-hidden">Навигация</h5>
           <ul className={s.nav_list}>
             <li className={s.nav_item}>
@@ -22,9 +23,6 @@ export default function Footer() {
 
         <section className={s.contacts}>
           <h5 className="visually-hidden">Контакты:</h5>
-          <p>Телефон: <a className="footer-contacts-phone" href="tel:+7-123-456-89-01">+7-123-456-89-01</a></p>
-          <p>Почта: <a className="footer-contacts-email" href="mailto:testmail@mail.ru">testmail@mail.ru</a></p>
-
           <ul className={s.social_list}>
 						<li>
 							<a className={`${s.social_item} ${s.social_item__vk}`} href="#" title="Вконтакте">
@@ -42,10 +40,14 @@ export default function Footer() {
 							</a>
 						</li>
 					</ul>
+          <p>Телефон: <a href="tel:+7-123-456-89-01">+7-123-456-89-01</a></p>
+          <p>Почта: <a href="mailto:testmail@mail.ru">testmail@mail.ru</a></p>
+
+          
         </section>
 
         <section className={s.payment_ways}>
-          <h5>Принимаем к оплате:</h5>
+          <h5 className={s.payment_header}>Принимаем к оплате:</h5>
           <div className={s.pay}>
             <div className={`${s.pay_systems} ${s.pay_systems__paypal}`}></div>
             <div className={`${s.pay_systems} ${s.pay_systems__mastercard}`}></div>
@@ -57,7 +59,7 @@ export default function Footer() {
         </section>
 
         <section className={s.copyright}>
-          <p className="footer-copyright">&laquo;Бисер и кольца 2021 &copy;&raquo;</p>
+          <p>&laquo;Бисер и кольца 2021 &copy;&raquo;</p>
         </section>
 
     </footer>

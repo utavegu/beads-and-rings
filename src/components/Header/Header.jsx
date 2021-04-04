@@ -1,28 +1,37 @@
 import React from 'react';
+import s from './Header.module.css';
 
 export default function Header() {
   return (
-    <header className="main-header">
+    <header className={s.header}>
+
       <h1 className="visually-hidden">Интернет-магазин титановых колец и изделий из бисера</h1>
-      <nav className="main-header__nav">
+      <nav className={s.nav}>
+
         <a href="#">
-          <img src="" width="" height="" alt=""/>
+          {/* Логотип адаптивный - 3 вида */}
+          <img src="" width="100" height="100" alt="Логотип сайта"/>
         </a>
-        <ul className="site-navigation">
-          <li className="site-navigation__item">
-            <a href="#">О нас</a>
+
+        <ul className={s.nav_list}>
+          <li className={s.nav_item}>
+            <a className={s.nav_link} href="#">О нас</a>
           </li>
-          <li className="site-navigation__item">
-            <a href="#">Каталог</a>
+          <li className={s.nav_item}>
+            <a className={s.nav_link} href="#">Каталог</a>
           </li>
-          <li className="site-navigation__item">
-            <a href="#">Акции</a>
+          <li className={s.nav_item}>
+            <a className={s.nav_link} href="#">Акции</a>
           </li>
         </ul>
+
       </nav>
+
       <a href="#">
+        КОРЗИНА
         <span className="visually-hidden">Корзина</span>
       </a>
+
     </header>
   )
 }
