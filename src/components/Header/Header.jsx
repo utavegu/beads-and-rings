@@ -1,18 +1,19 @@
 import React from 'react';
 import s from './Header.module.css';
+import logo from '../../img/logo_w-200.png'
 
 export default function Header() {
   return (
     <header className={s.header}>
 
       <h1 className="visually-hidden">Интернет-магазин титановых колец и изделий из бисера</h1>
+
+      <a className={s.logo} href="#">
+        {/* Логотип адаптивный - 3 вида */}
+        <img src={logo} width="200" height="97" alt="Логотип сайта"/>
+      </a>
+
       <nav className={s.nav}>
-
-        <a href="#">
-          {/* Логотип адаптивный - 3 вида */}
-          <img src="" width="100" height="100" alt="Логотип сайта"/>
-        </a>
-
         <ul className={s.nav_list}>
           <li className={s.nav_item}>
             <a className={s.nav_link} href="#">О нас</a>
@@ -23,12 +24,11 @@ export default function Header() {
           <li className={s.nav_item}>
             <a className={s.nav_link} href="#">Акции</a>
           </li>
-        </ul>
 
+        </ul>
       </nav>
 
-      <a href="#">
-        КОРЗИНА
+      <a className={s.shopping_cart} href="#">
         <span className="visually-hidden">Корзина</span>
       </a>
 

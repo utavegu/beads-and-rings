@@ -1,8 +1,14 @@
 .catalog {
-  width: 100%;
-  min-width: 320px;
-  margin: 0 auto;
   background-color: white;
+}
+
+.options {
+  background-color: #2e2e2e;
+}
+
+.options fieldset {
+  border-color: #b2a17a;
+  color: #b2a17a;
 }
 
 /*В ДРУГОЙ МОДУЛЬ*/
@@ -43,6 +49,6 @@
 
 @media (min-width: 1200px) {
   .catalog {
-    width: 1200px;
+    /* width: 1200px; */
   }
 }

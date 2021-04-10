@@ -1,5 +1,7 @@
 import React from 'react';
 import s from './Catalog.module.css';
+import ring from '../../img/ring.jpg';
+import beads from '../../img/beads.jpg';
 
 export default function Catalog() {
   /* Данные хранятся в этом компоненте. И только состояние корзины глобально */
@@ -72,7 +74,7 @@ export default function Catalog() {
 
           <li className={s.product_card}>
             <a href="" title="Посмотреть товар">
-              <img src="" alt="Какой-то товар" width="250" height="200"/>
+              <img src={ring} alt="Кольцо" width="200" height="200"/>
             </a>
             <div>
               <h3>Название товара</h3>
@@ -83,7 +85,7 @@ export default function Catalog() {
 
           <li className={s.product_card}>
             <a href="" title="Посмотреть товар">
-              <img src="" alt="" width="250" height="200"/>
+              <img src={beads} alt="Изделие из бисера" width="200" height="200"/>
             </a>
             <div>
               <h3>Название товара</h3>
@@ -94,7 +96,7 @@ export default function Catalog() {
 
           <li className={s.product_card}>
             <a href="" title="Посмотреть товар">
-              <img src="" alt="" width="250" height="200"/>
+              <img alt="Какая-нибудь картинка хрен-пойми какого размера" width="200" height="200"/>
             </a>
             <div>
               <h3>Название товара</h3>
@@ -105,7 +107,7 @@ export default function Catalog() {
 
           <li className={s.product_card}>
             <a href="" title="Посмотреть товар">
-              <img src="" alt="" width="250" height="200"/>
+              <img src={beads} alt="Изделие из бисера" width="200" height="200"/>
             </a>
             <div>
               <h3>Название товара</h3>
@@ -116,7 +118,7 @@ export default function Catalog() {
 
           <li className={s.product_card}>
             <a href="" title="Посмотреть товар">
-              <img src="" alt="" width="250" height="200"/>
+              <img src={ring} alt="Кольцо" width="200" height="200"/>
             </a>
             <div>
               <h3>Название товара</h3>
@@ -127,7 +129,29 @@ export default function Catalog() {
 
           <li className={s.product_card}>
             <a href="" title="Посмотреть товар">
-              <img src="" alt="" width="250" height="200"/>
+              <img src={ring} alt="Кольцо" width="200" height="200"/>
+            </a>
+            <div>
+              <h3>Название товара</h3>
+              <p>Цена товара</p>
+              <button type="button">Добавить в корзину</button>
+            </div>
+          </li>
+
+          <li className={s.product_card}>
+            <a href="" title="Посмотреть товар">
+              <img src={beads} alt="Изделие из бисера" width="200" height="200"/>
+            </a>
+            <div>
+              <h3>Название товара</h3>
+              <p>Цена товара</p>
+              <button type="button">Добавить в корзину</button>
+            </div>
+          </li>
+
+          <li className={s.product_card}>
+            <a href="" title="Посмотреть товар">
+              <img alt="Какая-нибудь картинка хрен-пойми какого размера" width="200" height="200"/>
             </a>
             <div>
               <h3>Название товара</h3>
