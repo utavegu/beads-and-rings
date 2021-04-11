@@ -6,11 +6,20 @@
   padding-bottom: 20px;
 }
 
+.footer a {
+  color: inherit;
+}
 
+.footer a:hover {
+  text-shadow: 1px 1px 1px black, 0 0 1px red;
+}
 
+.footer a:active {
+  text-shadow: 1px 1px 1px black, 0 0 10px red;
+}
 
 .navigation {
-  /* border: 1px dotted red; */
+
 }
 
 .nav_list {
@@ -21,15 +30,14 @@
   justify-content: space-around;
 }
 
-
-
 .contacts {
-  /* border: 1px dotted blue; */
+  text-align: center;
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  align-self: center;
+  margin: 0;
 }
 
 .contacts > * {
@@ -43,7 +51,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
 }
 
 .social_item {
@@ -69,10 +77,7 @@
   background-image: url(../../img/icon-insta.svg);
 }
 
-
-
 .payment_ways {
-  /* border: 1px dotted green; */
 }
 
 .payment_header {
@@ -116,9 +121,7 @@
   background-position: -52px -46px;
 }
 
-
 .copyright {
-  /* border: 1px dotted yellow; */
   text-align: center;
 }
 
@@ -129,9 +132,11 @@
 @media (min-width: 768px) {
   .footer {
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
 
   .nav_list {
+    text-align: center;
     flex-direction: column;
   }
 
@@ -146,7 +151,7 @@
 
 @media (min-width: 1200px) {
   .footer {
-    /* width: 1200px; */
     grid-template-columns: repeat(4, 1fr);
   }
+ 
 }

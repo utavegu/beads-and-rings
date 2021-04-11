@@ -16,9 +16,6 @@
 .nav {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-
-  display: grid;
-  grid-template-columns: auto 1fr;
 }
 
 .nav_list {
@@ -42,7 +39,11 @@
 }
 
 .nav_item a:hover {
-  text-shadow: 1px 1px 1px black, 0 0 1px red;
+  text-shadow: 1px 1px 1px black, 0 0 2px darkviolet;
+}
+
+.nav_item a:active {
+  text-shadow: 1px 1px 1px black, 0 0 15px darkviolet;
 }
 
 .shopping_cart {
@@ -64,5 +65,5 @@
 }
 
 @media (min-width: 1200px) {
-
+ 
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Header.module.css';
-import logo from '../../img/logo_w-200.png'
+import logo from '../../img/wizard-hat.png'
 
 export default function Header() {
   return (
@@ -10,7 +10,7 @@ export default function Header() {
 
       <a className={s.logo} href="#">
         {/* Логотип адаптивный - 3 вида */}
-        <img src={logo} width="200" height="97" alt="Логотип сайта"/>
+        <img src={logo} width="200" height="179" alt="Логотип сайта"/>
       </a>
 
       <nav className={s.nav}>
@@ -24,7 +24,6 @@ export default function Header() {
           <li className={s.nav_item}>
             <a className={s.nav_link} href="#">Акции</a>
           </li>
-
         </ul>
       </nav>
 

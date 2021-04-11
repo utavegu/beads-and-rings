@@ -23,6 +23,9 @@ export default function Footer() {
 
         <section className={s.contacts}>
           <h5 className="visually-hidden">Контакты:</h5>
+
+          <p><a href="tel:+7-123-456-89-01">8 923 456 89 01</a></p>
+
           <ul className={s.social_list}>
 						<li>
 							<a className={`${s.social_item} ${s.social_item__vk}`} href="#" title="Вконтакте">
@@ -40,14 +43,12 @@ export default function Footer() {
 							</a>
 						</li>
 					</ul>
-          <p>Телефон (ЗАМЕНИ НА ТРУБКУ): <a href="tel:+7-123-456-89-01">+7-123-456-89-01</a></p>
-          <p>Почта (ЗАМЕНИ НА КОНВЕРТ): <a href="mailto:testmail@mail.ru">testmail@mail.ru</a></p>
-
           
+          <p><a href="mailto:testmail@mail.ru">testmail@mail.ru</a></p>
         </section>
 
         <section className={s.payment_ways}>
-          <h5 className={s.payment_header}>Принимаем к оплате (ЗАМЕНИ НА КРЕДИТКУ):</h5>
+          <h5 className={s.payment_header}>Принимаем к оплате:</h5>
           <div className={s.pay}>
             <div className={`${s.pay_systems} ${s.pay_systems__paypal}`}></div>
             <div className={`${s.pay_systems} ${s.pay_systems__mastercard}`}></div>
