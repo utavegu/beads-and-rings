@@ -1,0 +1,14 @@
+.search {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.search_field {
+  width: 100%;
+}
+
+@media (min-width: 768px) { 
+  .search {
+    grid-column: 2/3;
+  }
+}

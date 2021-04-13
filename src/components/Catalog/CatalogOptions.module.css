@@ -1,0 +1,28 @@
+.options {
+  background-color: #2e2e2e;
+}
+
+.options form {
+  padding: 10px;
+}
+
+.options fieldset {
+  border-color: #b2a17a;
+  color: #b2a17a;
+}
+
+.options ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.budget input {
+  width: 45%;
+}
+
+@media (min-width: 768px) { 
+  .options {
+    grid-row: 1/3;
+  }
+}
