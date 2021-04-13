@@ -17,9 +17,76 @@
   padding: 0;
 }
 
+
+
+
+
+
+.custom_radio {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.list {
+  background-image: url(../../img/view_list_24dp.svg);
+}
+
+.module {
+  background-image: url(../../img/view_module_24dp.svg);
+}
+
+.presentation input:checked + .custom_radio {
+  background-color: brown;
+}
+
+
+
+
+.custom_checkbox {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../img/check_box_outline_blank_24dp.svg);
+  display: inline-block;
+}
+
+.category input:checked + .custom_checkbox {
+  background-image: url(../../img/check_box_24dp.svg);
+}
+
+
+
+
 .budget input {
   width: 45%;
 }
+
+
+
+
+.custom_arrow {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.ascending {
+  background-image: url(../../img/arrow_drop_up_24dp.svg);
+}
+
+.descending {
+  background-image: url(../../img/arrow_drop_down_24dp.svg);
+}
+
+.sort input:checked + .custom_arrow {
+  background-color: brown;
+}
+
+
+
+
+
+
 
 @media (min-width: 768px) { 
   .options {
