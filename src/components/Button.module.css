@@ -1,0 +1,37 @@
+.button {
+  display: block;
+  /* vertical-align: middle; */
+	font: inherit;
+  text-align: center;
+  text-transform: lowercase;
+	border: none;
+	cursor: pointer;
+	letter-spacing: 2px;
+
+	padding: 12px 12px;
+	border-radius: 15px;
+	min-width: 180px;
+	color: #2e2e2e;
+	background-color: #b2a17a;
+
+  margin: 25px auto;
+}
+
+.button:hover {
+	opacity: 0.5;
+}
+
+.button:active {
+	opacity: 1;
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.button:focus {
+  outline: none;
+	box-shadow: 0 0 5px 3px red;
+}
+
+.button:disabled {
+	background-color: #e5e5e5;
+}

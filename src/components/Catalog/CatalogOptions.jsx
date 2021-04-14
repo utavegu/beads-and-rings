@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Button';
 import s from './CatalogOptions.module.css';
 import RangeSlider from './RangeSlider.jsx';
 
@@ -88,7 +89,7 @@ export default function CatalogOptions() {
           </ul>
         </fieldset>
 
-        <button type="submit">Применить фильтры</button>
+        <Button type="submit">Применить фильтры</Button>
 
       </form>
 

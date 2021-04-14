@@ -8,6 +8,7 @@ import amulet2 from '../../img/amulet2.jpg';
 import ring4 from '../../img/ring3.jpg';
 import beads2 from '../../img/tree.webp';
 import s from './CatalogProducts.module.css';
+import Button from '../Button';
 
 export default function CatalogProducts() {
   return (
@@ -21,7 +22,7 @@ export default function CatalogProducts() {
           </div>
           <div className={s.card_options}>
             <a href="#">Посмотреть товар</a>
-            <button type="button">Добавить в корзину</button>
+            <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
             <h3>Кольцо всемогущества</h3>
@@ -35,7 +36,7 @@ export default function CatalogProducts() {
           </div>
           <div className={s.card_options}>
             <a href="#">Посмотреть товар</a>
-            <button type="button">Добавить в корзину</button>
+            <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
             <h3>Подвеска всевиденья</h3>
@@ -49,7 +50,7 @@ export default function CatalogProducts() {
           </div>
           <div className={s.card_options}>
             <a href="#">Посмотреть товар</a>
-            <button type="button">Добавить в корзину</button>
+            <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
             <h3>Кольцо двух стихий</h3>
@@ -63,7 +64,7 @@ export default function CatalogProducts() {
           </div>
           <div className={s.card_options}>
             <a href="#">Посмотреть товар</a>
-            <button type="button">Добавить в корзину</button>
+            <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
             <h3>Серебрянный оберег</h3>
@@ -77,7 +78,7 @@ export default function CatalogProducts() {
           </div>
           <div className={s.card_options}>
             <a href="#">Посмотреть товар</a>
-            <button type="button">Добавить в корзину</button>
+            <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
             <h3>Славянский рунический амулет</h3>
@@ -91,7 +92,7 @@ export default function CatalogProducts() {
           </div>
           <div className={s.card_options}>
             <a href="#">Посмотреть товар</a>
-            <button type="button">Добавить в корзину</button>
+            <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
             <h3 className={s.product_name}>Набор амулетов из семьи оборотней, терроризировавших златолесье</h3>
@@ -105,7 +106,7 @@ export default function CatalogProducts() {
           </div>
           <div className={s.card_options}>
             <a href="#">Посмотреть товар</a>
-            <button type="button">Добавить в корзину</button>
+            <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
             <h3 className={s.product_name}>Кольцо из черепа Нер'Зула</h3>
@@ -119,7 +120,7 @@ export default function CatalogProducts() {
           </div>
           <div className={s.card_options}>
             <a href="#">Посмотреть товар</a>
-            <button type="button">Добавить в корзину</button>
+            <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
             <h3 className={s.product_name}>Бисерное Чардрево из Богорощи</h3>
@@ -129,7 +130,7 @@ export default function CatalogProducts() {
 
       </ul>
 
-      <button className={s.load_more} type="button">Загрузить ещё</button>
+      <Button type="button">Загрузить ещё</Button>
 
     </section>
   )

@@ -11,15 +11,11 @@
 }
 
 .footer a:hover {
-  text-shadow: 1px 1px 1px black, 0 0 1px red;
+  text-shadow: 1px 1px 1px black, 0 0 2px darkviolet;
 }
 
 .footer a:active {
-  text-shadow: 1px 1px 1px black, 0 0 10px red;
-}
-
-.navigation {
-
+  text-shadow: 1px 1px 1px black, 0 0 15px darkviolet;
 }
 
 .nav_list {
@@ -75,9 +71,6 @@
 
 .social_item__inst {
   background-image: url(../../img/icon-insta.svg);
-}
-
-.payment_ways {
 }
 
 .payment_header {
