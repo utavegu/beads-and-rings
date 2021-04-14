@@ -17,14 +17,14 @@ export default function CatalogOptions() {
               <label>
                 <input className="visually-hidden" type="radio" name="presentation" value="Плитка"/>
                 <span className={`${s.custom_radio} ${s.list}`}></span>
-                <span>Плитка</span>
+                <span className="visually-hidden">Плитка</span>
               </label>
             </li>
             <li>
               <label>
                 <input className="visually-hidden" type="radio" name="presentation" value="Список"/>
                 <span className={`${s.custom_radio} ${s.module}`}></span>
-                <span>Список</span>
+                <span className="visually-hidden">Список</span>
               </label>
             </li>
           </ul>
@@ -61,30 +61,34 @@ export default function CatalogOptions() {
           <legend>Сортировать по</legend>
           <ul>
             <li>
-              Названию
-              <label>
-                <input className="visually-hidden" type="radio" name="sort" value="name-ascending"/>
-                <span className={`${s.custom_arrow} ${s.ascending}`}></span>
-                <span className="visually-hidden">Возрастанию</span>
-              </label>
-              <label>
-                <input className="visually-hidden" type="radio" name="sort" value="name-descending"/>
-                <span className={`${s.custom_arrow} ${s.descending}`}></span>
-                <span className="visually-hidden">Убыванию</span>
-              </label>
+              <p>Названию</p>
+              <div>
+                <label>
+                  <input className="visually-hidden" type="radio" name="sort" value="name-ascending"/>
+                  <span className={`${s.custom_arrow} ${s.ascending}`}></span>
+                  <span className="visually-hidden">Возрастанию</span>
+                </label>
+                <label>
+                  <input className="visually-hidden" type="radio" name="sort" value="name-descending"/>
+                  <span className={`${s.custom_arrow} ${s.descending}`}></span>
+                  <span className="visually-hidden">Убыванию</span>
+                </label>
+              </div>
             </li>
             <li>
-              Цене
-              <label>
-                <input className="visually-hidden" type="radio" name="sort" value="price-ascending"/>
-                <span className={`${s.custom_arrow} ${s.ascending}`}></span>
-                <span className="visually-hidden">Возрастанию</span>
-              </label>
-              <label>
-                <input className="visually-hidden" type="radio" name="sort" value="price-descending"/>
-                <span className={`${s.custom_arrow} ${s.descending}`}></span>
-                <span className="visually-hidden">Убыванию</span>
-              </label>
+              <p>Цене</p>
+              <div>
+                <label>
+                  <input className="visually-hidden" type="radio" name="sort" value="price-ascending"/>
+                  <span className={`${s.custom_arrow} ${s.ascending}`}></span>
+                  <span className="visually-hidden">Возрастанию</span>
+                </label>
+                <label>
+                  <input className="visually-hidden" type="radio" name="sort" value="price-descending"/>
+                  <span className={`${s.custom_arrow} ${s.descending}`}></span>
+                  <span className="visually-hidden">Убыванию</span>
+                </label>
+              </div>
             </li>
           </ul>
         </fieldset>

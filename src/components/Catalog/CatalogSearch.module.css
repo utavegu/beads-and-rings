@@ -2,7 +2,8 @@
   width: 80%;
   position: sticky;
   top: 15px;
-  margin: auto;
+  margin: 15px auto 0;
+  z-index: 1;
 }
 
 .search_field {

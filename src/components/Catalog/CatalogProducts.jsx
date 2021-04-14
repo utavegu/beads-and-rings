@@ -27,7 +27,7 @@ export default function CatalogProducts() {
      
       <ul className={s.products_list}>
 
-        <li className={s.product_card}>
+        <li className={`${s.product_card} ${s.new}`}>
           <div className={s.card_presentation}>
             <img src={ring} alt="Кольцо всемогущества" />
           </div>
@@ -83,7 +83,7 @@ export default function CatalogProducts() {
           </div>
         </li>
 
-        <li className={s.product_card}>
+        <li className={`${s.product_card} ${s.new}`}>
           <div className={s.card_presentation}>
             <img src={amulet} alt="Славянский рунический амулет" />
           </div>
@@ -153,7 +153,7 @@ export default function CatalogProducts() {
           </div>
         </li>
 
-        <li className={s.product_card}>
+        <li className={`${s.product_card} ${s.new}`}>
           <div className={s.card_presentation}>
             <img src={cat} alt="Кися" />
           </div>
@@ -218,7 +218,7 @@ export default function CatalogProducts() {
             <Button type="button">Добавить в корзину</Button>
           </div>
           <div>
-            <h3 className={s.product_name}>Чертополох</h3>
+            <h3 className={s.product_name}>Зачарованный чертополох</h3>
             <p>500 &#8381;</p>
           </div>
         </li>
