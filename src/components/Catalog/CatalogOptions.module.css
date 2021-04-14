@@ -29,11 +29,11 @@
 }
 
 .list {
-  background-image: url(../../img/view_list_24dp.svg);
+  background-image: url(../../img/icons/view_list_24dp.svg);
 }
 
 .module {
-  background-image: url(../../img/view_module_24dp.svg);
+  background-image: url(../../img/icons/view_module_24dp.svg);
 }
 
 .presentation input:checked + .custom_radio {
@@ -46,12 +46,12 @@
 .custom_checkbox {
   width: 24px;
   height: 24px;
-  background-image: url(../../img/check_box_outline_blank_24dp.svg);
+  background-image: url(../../img/icons/check_box_outline_blank_24dp.svg);
   display: inline-block;
 }
 
 .category input:checked + .custom_checkbox {
-  background-image: url(../../img/check_box_24dp.svg);
+  background-image: url(../../img/icons/check_box_24dp.svg);
 }
 
 
@@ -71,11 +71,11 @@
 }
 
 .ascending {
-  background-image: url(../../img/arrow_drop_up_24dp.svg);
+  background-image: url(../../img/icons/arrow_drop_up_24dp.svg);
 }
 
 .descending {
-  background-image: url(../../img/arrow_drop_down_24dp.svg);
+  background-image: url(../../img/icons/arrow_drop_down_24dp.svg);
 }
 
 .sort input:checked + .custom_arrow {

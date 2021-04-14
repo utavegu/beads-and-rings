@@ -62,15 +62,15 @@
 }
 
 .social_item__vk {
-  background-image: url(../../img/icon-vk.svg);
+  background-image: url(../../img/icons/icon-vk.svg);
 }
 
 .social_item__fb {
-  background-image: url(../../img/icon-fb.svg);
+  background-image: url(../../img/icons/icon-fb.svg);
 }
 
 .social_item__inst {
-  background-image: url(../../img/icon-insta.svg);
+  background-image: url(../../img/icons/icon-insta.svg);
 }
 
 .payment_header {
@@ -87,7 +87,7 @@
   height: 28px;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
-  background-image: url(../../img/footer-sprite.png);
+  background-image: url(../../img/icons/footer-sprite.png);
 }
 
 .pay_systems__paypal {

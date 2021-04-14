@@ -1,18 +1,29 @@
 import React from 'react';
-import ring from '../../img/ring.jpg';
-import beads from '../../img/beads.jpg';
-import ring2 from '../../img/ring2.jpg';
-import amulet from '../../img/amulet.jpg';
-import ring3 from '../../img/ring3.jpeg';
-import amulet2 from '../../img/amulet2.jpg';
-import ring4 from '../../img/ring3.jpg';
-import beads2 from '../../img/tree.webp';
+import CatalogSearch from './CatalogSearch';
+
+import ring from '../../img/content/ring.jpg';
+import beads from '../../img/content/beads.jpg';
+import ring2 from '../../img/content/ring2.jpg';
+import amulet from '../../img/content/amulet.jpg';
+import ring3 from '../../img/content/ring3.jpeg';
+import amulet2 from '../../img/content/amulet2.jpg';
+import ring4 from '../../img/content/ring3.jpg';
+import beads2 from '../../img/content/tree.webp';
+import fantasy from '../../img/content/fantasy.jpeg';
+import cat from '../../img/content/cat.jpeg';
+import dreamfish from '../../img/content/dreamfish.jpg';
+import butterfly from '../../img/content/butterfly.jpeg';
+import druid from '../../img/content/druid.jpeg';
+import root from '../../img/content/root.jpeg';
+
 import s from './CatalogProducts.module.css';
 import Button from '../Button';
 
 export default function CatalogProducts() {
   return (
     <section className={s.products}>
+
+      <CatalogSearch />
      
       <ul className={s.products_list}>
 
@@ -124,6 +135,90 @@ export default function CatalogProducts() {
           </div>
           <div>
             <h3 className={s.product_name}>Бисерное Чардрево из Богорощи</h3>
+            <p>500 &#8381;</p>
+          </div>
+        </li>
+
+        <li className={s.product_card}>
+          <div className={s.card_presentation}>
+            <img src={fantasy} alt="Фэнтэзийное кольцо" />
+          </div>
+          <div className={s.card_options}>
+            <a href="#">Посмотреть товар</a>
+            <Button type="button">Добавить в корзину</Button>
+          </div>
+          <div>
+            <h3 className={s.product_name}>Фэнтэзийное кольцо</h3>
+            <p>500 &#8381;</p>
+          </div>
+        </li>
+
+        <li className={s.product_card}>
+          <div className={s.card_presentation}>
+            <img src={cat} alt="Кися" />
+          </div>
+          <div className={s.card_options}>
+            <a href="#">Посмотреть товар</a>
+            <Button type="button">Добавить в корзину</Button>
+          </div>
+          <div>
+            <h3 className={s.product_name}>Кися</h3>
+            <p>500 &#8381;</p>
+          </div>
+        </li>
+
+        <li className={s.product_card}>
+          <div className={s.card_presentation}>
+            <img src={dreamfish} alt="Ловец снов 'Ловец рыб'" />
+          </div>
+          <div className={s.card_options}>
+            <a href="#">Посмотреть товар</a>
+            <Button type="button">Добавить в корзину</Button>
+          </div>
+          <div>
+            <h3 className={s.product_name}>Ловец снов "Ловец рыб"</h3>
+            <p>500 &#8381;</p>
+          </div>
+        </li>
+
+        <li className={s.product_card}>
+          <div className={s.card_presentation}>
+            <img src={butterfly} alt="Бабочка из бисера" />
+          </div>
+          <div className={s.card_options}>
+            <a href="#">Посмотреть товар</a>
+            <Button type="button">Добавить в корзину</Button>
+          </div>
+          <div>
+            <h3 className={s.product_name}>Бабочка из бисера</h3>
+            <p>500 &#8381;</p>
+          </div>
+        </li>
+
+        <li className={s.product_card}>
+          <div className={s.card_presentation}>
+            <img src={druid} alt="Амулет друида" />
+          </div>
+          <div className={s.card_options}>
+            <a href="#">Посмотреть товар</a>
+            <Button type="button">Добавить в корзину</Button>
+          </div>
+          <div>
+            <h3 className={s.product_name}>Амулет друида</h3>
+            <p>500 &#8381;</p>
+          </div>
+        </li>
+
+        <li className={s.product_card}>
+          <div className={s.card_presentation}>
+            <img src={root} alt="Чертополох" />
+          </div>
+          <div className={s.card_options}>
+            <a href="#">Посмотреть товар</a>
+            <Button type="button">Добавить в корзину</Button>
+          </div>
+          <div>
+            <h3 className={s.product_name}>Чертополох</h3>
             <p>500 &#8381;</p>
           </div>
         </li>

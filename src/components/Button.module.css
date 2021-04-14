@@ -1,6 +1,5 @@
 .button {
   display: block;
-  /* vertical-align: middle; */
 	font: inherit;
   text-align: center;
   text-transform: lowercase;
@@ -18,13 +17,11 @@
 }
 
 .button:hover {
-	opacity: 0.5;
+	filter: saturate(150%);
 }
 
 .button:active {
-	opacity: 1;
-  transform: translateY(1px);
-  filter: saturate(150%);
+  background: radial-gradient(ellipse farthest-corner at 50% 50%, #fdeaa8, #777);
 }
 
 .button:focus {

@@ -9,7 +9,6 @@ export default function Catalog() {
   return (
     <section className={s.catalog}>
       <CatalogOptions />
-      <CatalogSearch />
       <CatalogProducts />
     </section>
   )
