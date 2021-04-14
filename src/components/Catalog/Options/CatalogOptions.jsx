@@ -1,12 +1,11 @@
 import React from 'react';
-import Button from '../Button';
-import s from './CatalogOptions.module.css';
+import Button from '../../Button';
+import s from './CatalogOptions.module.css'; // Хм... можно сам компонент не разбивать, а стили для него попробовать сделать разные
 import RangeSlider from './RangeSlider.jsx';
 
 export default function CatalogOptions() {
   return (
     <section className={s.options}>
-
 
       <form action="">
 
@@ -15,9 +14,9 @@ export default function CatalogOptions() {
           <ul>
             <li>
               <label>
-                <input className="visually-hidden" type="radio" name="presentation" value="Плитка"/>
+                <input className="visually-hidden" type="radio" name="presentation" value="Карточки"/>
                 <span className={`${s.custom_radio} ${s.list}`}></span>
-                <span className="visually-hidden">Плитка</span>
+                <span className="visually-hidden">Карточки</span>
               </label>
             </li>
             <li>
@@ -53,8 +52,8 @@ export default function CatalogOptions() {
         <fieldset className={s.budget}>
           <legend>Цена</legend>
           <RangeSlider />
-          <input type="number" placeholder="от"/>
-          <input type="number" placeholder="до" style={{float: "right"}}/>
+          <input type="text" placeholder="от" pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"/>
+          <input type="text" placeholder="до" pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])" style={{float: "right"}}/>
         </fieldset>
 
         <fieldset className={s.sort}>

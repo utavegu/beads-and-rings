@@ -1,8 +1,3 @@
-.products {
-  margin-bottom: 20px;
-  position: relative;
-}
-
 .products_list {
   list-style: none;
   margin: 0;
@@ -33,7 +28,7 @@
   width: 60px;
   height: 59px;
 
-  background-image: url(../../img/icons/new-flag.png);
+  background-image: url(../../../img/icons/new-flag.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -72,22 +67,4 @@
 .product_name {
   width: 90%;
   margin: 5px auto;
-}
-
-@media (min-width: 768px) {
-  .products {
-    overflow: auto;
-    height: 800px;
-  }
-
-  .products > button {
-    position: sticky;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%);
-  }
-}
-
-@media (min-width: 1200px) {
-
 }

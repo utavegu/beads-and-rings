@@ -1,0 +1,19 @@
+.products {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .products {
+    overflow: auto;
+    height: 800px;
+  }
+
+  .products > button {
+    position: sticky;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
