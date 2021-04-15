@@ -15,14 +15,14 @@ export default function CatalogOptions() {
             <li>
               <label>
                 <input className="visually-hidden" type="radio" name="presentation" value="Карточки"/>
-                <span className={`${s.custom_radio} ${s.list}`}></span>
+                <span className={`${s.custom_radio} ${s.list}`} title="Карточки"></span>
                 <span className="visually-hidden">Карточки</span>
               </label>
             </li>
             <li>
               <label>
                 <input className="visually-hidden" type="radio" name="presentation" value="Список"/>
-                <span className={`${s.custom_radio} ${s.module}`}></span>
+                <span className={`${s.custom_radio} ${s.module}`} title="Список"></span>
                 <span className="visually-hidden">Список</span>
               </label>
             </li>
@@ -64,12 +64,12 @@ export default function CatalogOptions() {
               <div>
                 <label>
                   <input className="visually-hidden" type="radio" name="sort" value="name-ascending"/>
-                  <span className={`${s.custom_arrow} ${s.ascending}`}></span>
+                  <span className={`${s.custom_arrow} ${s.ascending}`} title="по возрастанию"></span>
                   <span className="visually-hidden">Возрастанию</span>
                 </label>
                 <label>
                   <input className="visually-hidden" type="radio" name="sort" value="name-descending"/>
-                  <span className={`${s.custom_arrow} ${s.descending}`}></span>
+                  <span className={`${s.custom_arrow} ${s.descending}`} title="по убыванию"></span>
                   <span className="visually-hidden">Убыванию</span>
                 </label>
               </div>
@@ -79,12 +79,12 @@ export default function CatalogOptions() {
               <div>
                 <label>
                   <input className="visually-hidden" type="radio" name="sort" value="price-ascending"/>
-                  <span className={`${s.custom_arrow} ${s.ascending}`}></span>
+                  <span className={`${s.custom_arrow} ${s.ascending}`} title="по возрастанию"></span>
                   <span className="visually-hidden">Возрастанию</span>
                 </label>
                 <label>
                   <input className="visually-hidden" type="radio" name="sort" value="price-descending"/>
-                  <span className={`${s.custom_arrow} ${s.descending}`}></span>
+                  <span className={`${s.custom_arrow} ${s.descending}`} title="по убыванию"></span>
                   <span className="visually-hidden">Убыванию</span>
                 </label>
               </div>

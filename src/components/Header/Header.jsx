@@ -27,7 +27,7 @@ export default function Header() {
         </ul>
       </nav>
 
-      <a className={s.shopping_cart} href="#">
+      <a className={s.shopping_cart} title="Корзина" href="#">
         <span className="visually-hidden">Корзина</span>
       </a>
 

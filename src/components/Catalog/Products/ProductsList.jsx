@@ -21,6 +21,50 @@ export default function ProductsList() {
   return (
     <ul className={s.products_list}>
 
+      <li className={`${s.product_string} ${s.new}`}>
+        <div className={s.string_presentation}>
+          <img src={ring} alt="Кольцо всемогущества" />
+        </div>
+        <h3>Кольцо всемогущества</h3>
+        <p>1500 &#8381;</p>
+        <a href="#" title="Посмотреть товар">
+          <span className="visually-hidden">Посмотреть товар</span>
+        </a>
+        <button type="button" title="Добавить в корзину">
+          <span className="visually-hidden">Добавить в корзину</span>
+        </button>
+      </li>
+
+      <li className={`${s.product_string} ${s.new}`}>
+        <div className={s.string_presentation}>
+          <img src={beads} alt="Набор амулетов из семьи оборотней, терроризировавших златолесье" />
+        </div>
+        <h3>Набор амулетов из семьи оборотней, терроризировавших златолесье</h3>
+        <p>1500 &#8381;</p>
+        <a href="#" title="Посмотреть товар">
+          <span className="visually-hidden">Посмотреть товар</span>
+        </a>
+        <button type="button" title="Добавить в корзину">
+          <span className="visually-hidden">Добавить в корзину</span>
+        </button>
+      </li>
+
+      <li className={`${s.product_string} ${s.new}`}>
+        <div className={s.string_presentation}>
+          <img src={butterfly} alt="Кольцо всемогущества" />
+        </div>
+        <h3>Кольцо всемогущества</h3>
+        <p>1500 &#8381;</p>
+        <a href="#" title="Посмотреть товар">
+          <span className="visually-hidden">Посмотреть товар</span>
+        </a>
+        <button type="button" title="Добавить в корзину">
+          <span className="visually-hidden">Добавить в корзину</span>
+        </button>
+      </li>
+
+      {/* ------------------------------- */}
+
       <li className={`${s.product_card} ${s.new}`}>
         <div className={s.card_presentation}>
           <img src={ring} alt="Кольцо всемогущества" />

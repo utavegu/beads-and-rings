@@ -20,6 +20,9 @@
 
 
 
+.presentation {
+  display: none;
+}
 
 .presentation ul {
   display: flex;
@@ -132,5 +135,11 @@
 @media (min-width: 768px) { 
   .options {
     grid-row: 1/3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .presentation {
+    display: block;
   }
 }
