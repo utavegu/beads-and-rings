@@ -2,28 +2,13 @@ import React from 'react';
 import s from './ProductsList.module.css';
 import Button from '../../Button';
 
-import ring from '../../../img/content/ring.jpg';
-import beads from '../../../img/content/beads.jpg';
-import ring2 from '../../../img/content/ring2.jpg';
-import amulet from '../../../img/content/amulet.jpg';
-import ring3 from '../../../img/content/ring3.jpeg';
-import amulet2 from '../../../img/content/amulet2.jpg';
-import ring4 from '../../../img/content/ring3.jpg';
-import beads2 from '../../../img/content/tree.webp';
-import fantasy from '../../../img/content/fantasy.jpeg';
-import cat from '../../../img/content/cat.jpeg';
-import dreamfish from '../../../img/content/dreamfish.jpg';
-import butterfly from '../../../img/content/butterfly.jpeg';
-import druid from '../../../img/content/druid.jpeg';
-import root from '../../../img/content/root.jpeg';
-
 export default function ProductsList() {
   return (
     <ul className={s.products_list}>
 
       <li className={`${s.product_string} ${s.new}`}>
         <div className={s.string_presentation}>
-          <img src={ring} alt="Кольцо всемогущества" />
+          <img src="./img/ring.jpg" alt="Кольцо всемогущества" />
         </div>
         <h3>Кольцо всемогущества</h3>
         <p>1500 &#8381;</p>
@@ -37,7 +22,7 @@ export default function ProductsList() {
 
       <li className={`${s.product_string} ${s.new}`}>
         <div className={s.string_presentation}>
-          <img src={beads} alt="Набор амулетов из семьи оборотней, терроризировавших златолесье" />
+          <img src="./img/amulet2.jpg" alt="Набор амулетов из семьи оборотней, терроризировавших златолесье" />
         </div>
         <h3>Набор амулетов из семьи оборотней, терроризировавших златолесье</h3>
         <p>1500 &#8381;</p>
@@ -51,7 +36,7 @@ export default function ProductsList() {
 
       <li className={`${s.product_string} ${s.new}`}>
         <div className={s.string_presentation}>
-          <img src={butterfly} alt="Кольцо всемогущества" />
+          <img src="./img/ring.jpg" alt="Кольцо всемогущества" />
         </div>
         <h3>Кольцо всемогущества</h3>
         <p>1500 &#8381;</p>
@@ -67,7 +52,7 @@ export default function ProductsList() {
 
       <li className={`${s.product_card} ${s.new}`}>
         <div className={s.card_presentation}>
-          <img src={ring} alt="Кольцо всемогущества" />
+          <img src="./img/ring.jpg" alt="Кольцо всемогущества" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -81,7 +66,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={beads} alt="Подвеска всевиденья" />
+          <img src="./img/beads.jpg" alt="Подвеска всевиденья" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -95,7 +80,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={ring2} alt="Кольцо двух стихий" />
+          <img src="./img/ring2.jpg" alt="Кольцо двух стихий" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -109,7 +94,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={ring3} alt="Серебрянный оберег" />
+          <img src="./img/ring3.jpeg" alt="Серебрянный оберег" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -123,7 +108,7 @@ export default function ProductsList() {
 
       <li className={`${s.product_card} ${s.new}`}>
         <div className={s.card_presentation}>
-          <img src={amulet} alt="Славянский рунический амулет" />
+          <img src="./img/amulet.jpg" alt="Славянский рунический амулет" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -137,7 +122,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={amulet2} alt="Набор амулетов из семьи оборотней, терроризировавших златолесье" />
+          <img src="./img/amulet2.jpg" alt="Набор амулетов из семьи оборотней, терроризировавших златолесье" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -151,7 +136,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={ring4} alt="Кольцо из черепа Нер'Зула" />
+          <img src="./img/ring3.jpg" alt="Кольцо из черепа Нер'Зула" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -165,7 +150,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={beads2} alt="Бисерное Чардрево из Богорощи" />
+          <img src="./img/tree.webp" alt="Бисерное Чардрево из Богорощи" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -179,7 +164,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={fantasy} alt="Фэнтэзийное кольцо" />
+          <img src="./img/fantasy.jpeg" alt="Фэнтэзийное кольцо" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -193,7 +178,7 @@ export default function ProductsList() {
 
       <li className={`${s.product_card} ${s.new}`}>
         <div className={s.card_presentation}>
-          <img src={cat} alt="Кися" />
+          <img src="./img/cat.jpeg" alt="Кися" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -207,7 +192,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={dreamfish} alt="Ловец снов 'Ловец рыб'" />
+          <img src="./img/dreamfish.jpg" alt="Ловец снов 'Ловец рыб'" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -221,7 +206,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={butterfly} alt="Бабочка из бисера" />
+          <img src="./img/butterfly.jpeg" alt="Бабочка из бисера" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -235,7 +220,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={druid} alt="Амулет друида" />
+          <img src="./img/druid.jpeg" alt="Амулет друида" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
@@ -249,7 +234,7 @@ export default function ProductsList() {
 
       <li className={s.product_card}>
         <div className={s.card_presentation}>
-          <img src={root} alt="Чертополох" />
+          <img src="./img/root.jpeg" alt="Чертополох" />
         </div>
         <div className={s.card_options}>
           <a href="#">Посмотреть товар</a>
