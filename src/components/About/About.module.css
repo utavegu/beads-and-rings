@@ -1,0 +1,40 @@
+.about {
+  color: #2e2e2e;
+  background-color: #b2a17a;
+  background-image: url(../../img/paper-3653437_1920.png);
+  background-size: cover;
+  background-position: center;
+  padding: 50px 50px 50px 100px;
+}
+
+.about h2 {
+  margin: 0;
+  border-bottom: 3px solid #2e2e2e;
+	padding-right: 15px;
+	padding-left: 15px;
+  font-size: 1.5em;
+	margin-left: 50%;
+}
+
+.about p {
+  text-indent: 30px;
+	line-height: 1.5;
+}
+
+.about figure {
+  background-color: burlywood;
+}
+
+@media (min-width: 768px) {
+  .elven_sorcerer {
+    float: right;
+  }
+
+  .elven_archer {
+    float: left;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
