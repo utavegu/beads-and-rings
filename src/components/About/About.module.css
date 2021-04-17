@@ -1,6 +1,7 @@
 .about {
   color: #2e2e2e;
   background-color: #b2a17a;
+  font-size: 26px;
 }
 
 .about_us {
@@ -21,8 +22,31 @@
 	line-height: 1.5;
 }
 
-.about figure {
-  background-color: burlywood;
+.photo {
+  margin: 0 auto;
+  padding: 5px;
+	
+	text-align: center;
+  
+  /* background-color: burlywood; */
+  /*Или...*/
+	background-color: #FDD9B5;
+
+  border-style: solid;
+  border-width: 10px;
+  border-image: url(../../img/ornament.png) 30 round round;
+  max-width: 320px;
+}
+
+.photo img {
+  border-style: solid;
+	border-color: chocolate;
+	border-radius: 5px;
+}
+
+.photo figcaption {
+  color: white;
+	text-shadow: 2px 2px 3px black;
 }
 
 /* ---------- */
@@ -39,13 +63,22 @@
     padding: 40px;
   }
 
+  .photo {
+    margin: 0 20px 0;
+  }
+
   .sorcerer {
-    float: right;
+    float: left;
   }
 
   .archer {
-    float: left;
+    float: right;
   }
+
+  .prizes {
+    max-width: none;
+  }
+
 }
 
 @media (min-width: 1200px) {

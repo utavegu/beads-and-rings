@@ -8,7 +8,8 @@ import { amber } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '100%',
+    width: '70%',
+    margin: '0 auto',
   },
   icon: {
     verticalAlign: 'bottom',
