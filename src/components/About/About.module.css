@@ -1,10 +1,10 @@
 .about {
   color: #2e2e2e;
   background-color: #b2a17a;
-  background-image: url(../../img/paper-3653437_1920.png);
-  background-size: cover;
-  background-position: center;
-  padding: 50px 50px 50px 100px;
+}
+
+.about_us {
+  padding: 20px;
 }
 
 .about h2 {
@@ -25,12 +25,25 @@
   background-color: burlywood;
 }
 
+/* ---------- */
+
+.answer {
+  padding: 20px;
+}
+
 @media (min-width: 768px) {
-  .elven_sorcerer {
+  .about_us {
+    background-image: url(../../img/scroll_1920.png);
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+  }
+
+  .sorcerer {
     float: right;
   }
 
-  .elven_archer {
+  .archer {
     float: left;
   }
 }
