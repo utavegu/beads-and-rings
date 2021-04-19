@@ -35,6 +35,7 @@ const useStyles = makeStyles(() => ({
     maxWidth: 400,
     overflow: 'hidden',
     width: '100%',
+    cursor: 'pointer',
   },
   button: {
     color: '#b2a17a',
@@ -44,11 +45,11 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function SwipeableTextMobileStepper({slidesInfo}) {
+function SwipeableTextMobileStepper({stocksInfo, onChangeStock: handleChangeStock}) {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = slidesInfo.length;
+  const maxSteps = stocksInfo.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -65,7 +66,7 @@ function SwipeableTextMobileStepper({slidesInfo}) {
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
-        {slidesInfo[activeStep].label}
+        {stocksInfo[activeStep].label}
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -74,10 +75,10 @@ function SwipeableTextMobileStepper({slidesInfo}) {
         enableMouseEvents
         interval={3000}
       >
-        {slidesInfo.map((step, index) => (
-          <div key={step.label}>
+        {stocksInfo.map((step, index) => (
+          <div key={step.id}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <img className={classes.img} src={step.imgPath} alt={step.label} />
+              <img onClick={() => handleChangeStock(step.id)} className={classes.img} src={step.imgPath} alt={step.label} />
             ) : null}
           </div>
         ))}

@@ -2,3 +2,15 @@
   color: #2e2e2e;
   background-color: #b2a17a;
 }
+
+@media (min-width: 768px) {
+  .promo_container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+ 
+}
