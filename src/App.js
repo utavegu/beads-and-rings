@@ -4,6 +4,7 @@ import Catalog from "./components/Catalog/Catalog";
 import About from "./components/About/About";
 import Stocks from "./components/Stocks/Stocks";
 import Cart from "./components/Cart/Cart";
+import ProductPage from "./components/Catalog/ProductPage/ProductPage";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <About />
         <Catalog /> 
         <Stocks />
-        */}
         <Cart />
+        */}
+        <ProductPage />
       </main>
       <Footer />
     </>

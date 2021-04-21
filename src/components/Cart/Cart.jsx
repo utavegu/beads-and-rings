@@ -8,9 +8,9 @@ export default function Cart() {
     <section className={s.cart}>
       <h2 className="visually-hidden">Корзина</h2>
       <section>
-        <h3 className="visually-hidden">Товары в корзине</h3>
-
+        
         <table>
+          <caption>Товары в корзине</caption>
           <thead>
             <tr>
               <th scope="col">#</th>
