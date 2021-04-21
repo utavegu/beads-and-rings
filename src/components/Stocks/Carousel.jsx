@@ -96,7 +96,7 @@ function SwipeableTextMobileStepper({stocksInfo, onChangeStock: handleChangeStoc
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
-            Next
+            Вперед
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
@@ -108,7 +108,7 @@ function SwipeableTextMobileStepper({stocksInfo, onChangeStock: handleChangeStoc
             disabled={activeStep === 0} 
           >
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
+            Назад
           </Button>
         }
       />

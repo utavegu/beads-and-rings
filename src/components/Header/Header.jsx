@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import s from './Header.module.css';
 import logo from '../../img/wizard-hat.png'
 
@@ -8,28 +9,28 @@ export default function Header() {
 
       <h1 className="visually-hidden">Интернет-магазин титановых колец и изделий из бисера</h1>
 
-      <a className={s.logo} href="#">
-        {/* Логотип адаптивный - 3 вида */}
+      <Link to="/" className={s.logo} exact>
+        {/* Логотип адаптивный - 3 вида... Впрочем, надо ли? */}
         <img src={logo} width="200" height="179" alt="Логотип сайта"/>
-      </a>
+      </Link>
 
       <nav className={s.nav}>
         <ul className={s.nav_list}>
           <li className={s.nav_item}>
-            <a className={s.nav_link} href="#">Каталог</a>
+            <NavLink to="/" className={s.nav_link} activeClassName={s.active_item} exact>Каталог</NavLink>
           </li>
           <li className={s.nav_item}>
-            <a className={s.nav_link} href="#">О нас</a>
+            <NavLink to="/about" className={s.nav_link} activeClassName={s.active_item}>О нас</NavLink>
           </li>
           <li className={s.nav_item}>
-            <a className={s.nav_link} href="#">Акции</a>
+            <NavLink to="/stocks" className={s.nav_link} activeClassName={s.active_item}>Акции</NavLink>
           </li>
         </ul>
       </nav>
 
-      <a className={s.shopping_cart} title="Корзина" href="#">
+      <Link to="/cart" className={s.shopping_cart} title="Корзина">
         <span className="visually-hidden">Корзина</span>
-      </a>
+      </Link>
 
     </header>
   )

@@ -18,6 +18,10 @@
   text-shadow: 1px 1px 1px black, 0 0 15px darkviolet;
 }
 
+.active_item {
+  border-bottom: 3px solid darkviolet;
+}
+
 .nav_list {
   list-style: none;
   margin: 0;

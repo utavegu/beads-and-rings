@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import s from './Page404.module.css';
 
 export default function Page404() {
@@ -9,7 +10,7 @@ export default function Page404() {
         <source media="(min-width: 768px)" srcSet="./img/crossroads.jpg" />
         <img src="./img/crossroads-mobile.jpg" alt="Фотография перепутья" />
       </picture>
-      <p>Ты сбился с пути, странник! <br /> Вернись <a href="#">назад</a> или в <a href="#">начало пути</a></p>
+      <p>Ты сбился с пути, странник! <br /> Вернись <a href="#">назад</a> или в <Link to="/">начало пути</Link></p>
     </section>
   )
 }

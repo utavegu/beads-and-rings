@@ -14,12 +14,14 @@ function App() {
       <Header />
       <main>
         <Switch>
+          {/*           
           <Route path="/catalog" component={Catalog} exact />
           <Route path="/catalog/:id([0-9]+)?" component={ProductPage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/contacts" component={ContactsPage} />
+           */}
+          <Route path="/stocks" component={Stocks} />
+          <Route path="/about" component={About} />
           <Route path="/cart" component={Cart} />
-          <Route path="/" exact component={MainPage} />
+          <Route path="/" component={Catalog} exact />
           <Route path="*" component={Page404} />
         </Switch>
       </main>

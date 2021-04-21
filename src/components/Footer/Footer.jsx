@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import s from './Footer.module.css';
 
 export default function Footer() {
@@ -6,26 +7,25 @@ export default function Footer() {
     <footer className={s.footer}>
 
         <section className={s.navigation}>
-          {/* Потом оценишь вложенность и поменяешь на нужную цифру */}
-          <h5 className="visually-hidden">Навигация</h5>
+          <h2 className="visually-hidden">Навигация</h2>
           <ul className={s.nav_list}>
             <li className={s.nav_item}>
-              <a href="#">О нас</a>
+              <NavLink to="/about" className={s.nav_link} activeClassName={s.active_item}>О нас</NavLink>
             </li>
             <li className={s.nav_item}>
-              <a href="#">Каталог</a>
+              <NavLink to="/" className={s.nav_link} activeClassName={s.active_item} exact>Каталог</NavLink>
             </li>
             <li className={s.nav_item}>
-              <a href="#">Акции</a>
+              <NavLink to="/stocks" className={s.nav_link} activeClassName={s.active_item}>Акции</NavLink>
             </li>
             <li className={`${s.nav_item} ${s.not_mobile} `}>
-              <a href="#">Корзина</a>
+              <NavLink to="/cart" className={s.nav_link} activeClassName={s.active_item}>Корзина</NavLink>
             </li>
           </ul>
         </section>
 
         <section className={s.contacts}>
-          <h5 className="visually-hidden">Контакты:</h5>
+          <h2 className="visually-hidden">Контакты:</h2>
 
           <p><a href="tel:+7-123-456-89-01">8 923 456 89 01</a></p>
 
@@ -51,7 +51,7 @@ export default function Footer() {
         </section>
 
         <section className={s.payment_ways}>
-          <h5 className={s.payment_header}>Принимаем к оплате:</h5>
+          <h2 className={s.payment_header}>Принимаем к оплате:</h2>
           <div className={s.pay}>
             <div className={`${s.pay_systems} ${s.pay_systems__paypal}`}></div>
             <div className={`${s.pay_systems} ${s.pay_systems__mastercard}`}></div>
