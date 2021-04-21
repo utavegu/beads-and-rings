@@ -118,6 +118,10 @@
   text-align: center;
 }
 
+.not_mobile {
+  display: none;
+}
+
 
 
 
@@ -138,6 +142,10 @@
   }
 
   .contacts {
+    display: block;
+  }
+
+  .not_mobile {
     display: block;
   }
 }

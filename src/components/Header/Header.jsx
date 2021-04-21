@@ -16,10 +16,10 @@ export default function Header() {
       <nav className={s.nav}>
         <ul className={s.nav_list}>
           <li className={s.nav_item}>
-            <a className={s.nav_link} href="#">О нас</a>
+            <a className={s.nav_link} href="#">Каталог</a>
           </li>
           <li className={s.nav_item}>
-            <a className={s.nav_link} href="#">Каталог</a>
+            <a className={s.nav_link} href="#">О нас</a>
           </li>
           <li className={s.nav_item}>
             <a className={s.nav_link} href="#">Акции</a>

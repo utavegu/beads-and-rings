@@ -18,6 +18,9 @@ export default function Footer() {
             <li className={s.nav_item}>
               <a href="#">Акции</a>
             </li>
+            <li className={`${s.nav_item} ${s.not_mobile} `}>
+              <a href="#">Корзина</a>
+            </li>
           </ul>
         </section>
 

@@ -1,0 +1,28 @@
+.page404 {
+  background-color: #2e2e2e;
+  color: #b2a17a;
+  text-align: center;
+}
+
+.page404 h2 {
+  margin: 0;
+  padding: 15px 0 15px;
+}
+
+.page404 img {
+  border-style: solid;
+  border-width: 10px;
+  border-image: url(../../img/ornament.png) 30 round round;
+}
+
+.page404 p {
+  margin: 0;
+  padding: 15px;
+  font-size: larger;
+}
+
+.page404 a {
+  color: inherit;
+  font-style: italic;
+  text-decoration: underline;
+}
