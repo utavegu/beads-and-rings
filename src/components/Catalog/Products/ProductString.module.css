@@ -1,0 +1,65 @@
+.product_string {
+  border: 1px solid lightgrey;
+  background-color: #fdfdfd;
+  border-radius: 15px;
+  width: 95%;
+  margin-bottom: 10px;
+  max-height: 103px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  position: relative;
+}
+
+.product_string:hover {
+  box-shadow: 0 0 10px 3px #aeb2ba;
+}
+
+.string_presentation {
+  width: 100px;
+  height: 100px;
+}
+
+.string_presentation img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.product_string h3 {
+  text-align: right;
+  max-width: 30%;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.product_string a {
+  width: 48px;
+  height: 48px;
+  background-image: url(../../../img/icons/zoom_in_black_48dp.svg);
+}
+
+.product_string button {
+  width: 48px;
+  height: 48px;
+  background-image: url(../../../img/icons/add_shopping_cart_black_48dp.svg);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.new::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 59px;
+
+  background-image: url(../../../img/icons/new-flag.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

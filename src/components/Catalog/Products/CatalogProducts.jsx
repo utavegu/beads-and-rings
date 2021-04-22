@@ -4,11 +4,11 @@ import s from './CatalogProducts.module.css';
 import Button from '../../Button';
 import ProductsList from './ProductsList';
 
-export default function CatalogProducts() {
+export default function CatalogProducts({items}) {
   return (
     <section className={s.products}>
       <CatalogSearch />
-      <ProductsList />
+      <ProductsList items={items} />
       <Button type="button">Загрузить ещё</Button>
     </section>
   )
