@@ -81,7 +81,7 @@
     "materials": ["эмаль", "дентин"],
     "weight": 70.20,
     "color": ["белый"],
-    "isNew": true
+    "isNew": false
   },
   {
     "id": 6,
@@ -151,7 +151,7 @@
     "materials": ["бисер", "медная проволока"],
     "weight": 120.10,
     "color": ["зеленый", "красный", "медный"],
-    "isNew": false
+    "isNew": true
   },
   {
     "id": 11,
