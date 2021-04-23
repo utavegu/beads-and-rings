@@ -5,17 +5,21 @@ import RangeSlider from './RangeSlider.jsx';
 
 export default function CatalogOptions({onGetFilters: handleGetFilters}) {
 
-  const [filters, setFilters] = useState({
+  const [options, setOptions] = useState({
     view: "cards",
-    categoryRings: true,
-    categoryBeads: true,
-    budgetMin: '',
-    budgetMax: '',
+    category: {
+      rings: true,
+      beads: true,
+    },
+    budget: {
+      min: '',
+      max: '',
+    },
     sort: "name-ascending",
   })
 
   const handleChangeInput = ({target}) => {
-    const name = target.name;
+    const [subObject, name] = target.name.split("_");
     let value;
     switch(target.type) {
       case 'checkbox':
@@ -28,12 +32,19 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
         value = target.value;
         break;
     }
-    setFilters(prev => ({...prev, [name]: value}));
-  }
+
+    const newState = target.type !== 'radio'
+    ?
+    {...options, [subObject]: {...options[subObject], [name]: value}}
+    :
+    {...options, [name]: value};
+
+    setOptions(newState);
+  };
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    handleGetFilters(filters);
+    handleGetFilters(options);
   }
 
   return (
@@ -49,9 +60,9 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
                 <input
                   className="visually-hidden"
                   type="radio"
-                  name="view"
+                  name="_view"
                   id="cards"
-                  checked={filters.view === "cards"}
+                  checked={options.view === "cards"}
                   onChange={handleChangeInput}
                 />
                 <span className={`${s.custom_radio} ${s.list}`} title="Карточки"></span>
@@ -63,9 +74,9 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
                 <input
                   className="visually-hidden"
                   type="radio"
-                  name="view"
+                  name="_view"
                   id="list"
-                  checked={filters.view === "list"}
+                  checked={options.view === "list"}
                   onChange={handleChangeInput} 
                 />
                 <span className={`${s.custom_radio} ${s.module}`} title="Список"></span>
@@ -83,8 +94,8 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
                 <input 
                   className="visually-hidden"
                   type="checkbox"
-                  name="categoryRings"
-                  checked={filters.categoryRings}
+                  name="category_rings"
+                  checked={options.category.rings}
                   onChange={handleChangeInput}
                 />
                 <span className={s.custom_checkbox}></span>
@@ -96,8 +107,8 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
                 <input
                   className="visually-hidden"
                   type="checkbox"
-                  name="categoryBeads"
-                  checked={filters.categoryBeads}
+                  name="category_beads"
+                  checked={options.category.beads}
                   onChange={handleChangeInput}
                 />
                 <span className={s.custom_checkbox}></span>
@@ -118,8 +129,8 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
             type="text"
             placeholder="от"
             pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"
-            name="budgetMin"
-            value={filters.budgetMin}
+            name="budget_min"
+            value={options.budget.min}
             onChange={handleChangeInput}
           />
           <input
@@ -127,8 +138,8 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
             placeholder="до"
             pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"
             style={{float: "right"}}
-            name="budgetMax"
-            value={filters.budgetMax}
+            name="budget_max"
+            value={options.budget.max}
             onChange={handleChangeInput}
           />
         </fieldset>
@@ -143,9 +154,9 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="sort"
+                    name="_sort"
                     id="name-ascending"
-                    checked={filters.sort === "name-ascending"}
+                    checked={options.sort === "name-ascending"}
                     onChange={handleChangeInput}
                   />
                   <span className={`${s.custom_arrow} ${s.ascending}`} title="по возрастанию"></span>
@@ -155,9 +166,9 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="sort"
+                    name="_sort"
                     id="name-descending"
-                    checked={filters.sort === "name-descending"}
+                    checked={options.sort === "name-descending"}
                     onChange={handleChangeInput}
                   />
                   <span className={`${s.custom_arrow} ${s.descending}`} title="по убыванию"></span>
@@ -172,9 +183,9 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="sort"
+                    name="_sort"
                     id="price-ascending"
-                    checked={filters.sort === "price-ascending"}
+                    checked={options.sort === "price-ascending"}
                     onChange={handleChangeInput}
                   />
                   <span className={`${s.custom_arrow} ${s.ascending}`} title="по возрастанию"></span>
@@ -184,9 +195,9 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="sort"
+                    name="_sort"
                     id="price-descending"
-                    checked={filters.sort === "price-descending"}
+                    checked={options.sort === "price-descending"}
                     onChange={handleChangeInput}
                   />
                   <span className={`${s.custom_arrow} ${s.descending}`} title="по убыванию"></span>
