@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './Catalog.module.css';
 import CatalogOptions from './Options/CatalogOptions';
 import CatalogProducts from './Products/CatalogProducts';
@@ -8,21 +8,44 @@ export default function Catalog() {
   /* Данные хранятся в этом компоненте. И только состояние корзины глобально */
   /* ПРОПТАЙПС ДАВАЙ УЖЕ НАСТРАИВАЙ!!! КОМПОНЕНТЫ-ТО ПЛОДЯТСЯ!!!*/
 
-    // 1) Сортировка  
     // 2) Фильтрация
     // 3) Отображение
 
-  const handleGetFilters = (filters) => {
-    console.log(filters);
-    // productsData
+  const [products, setProducts] = useState(productsData)
 
+  const handleGetFilters = (filters) => {
+    // Прогоняем в таком порядке, чейном:
+    // сначала все фильтры
+    // затем сортровка
+    // затем одаём это в стейт с данными и их уже погружаем в каталог продуктс
+    // что касается отображения - скорее всего это просто отдельный флаг, исходя из значения которого будет отрисовываться тот или иной компонент. Но имей в виду, что вариантов отрисовки может быть больше, чем 2, потому на булево тут лучше не особо рассчитывай
+    let filtredProducts = productsData
+      .slice()
+      .sort((a, b) => {
+        switch(filters.sort) {
+          case 'name-ascending':
+            if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+            break;
+          case 'name-descending':
+            if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
+            break;
+          case 'price-ascending':
+            return a.price-b.price;
+          case 'price-descending':
+            return b.price-a.price;
+          default:
+            console.log("Неправильные входные данные");
+            break;
+        }
+      })
+    setProducts(filtredProducts);
   }
 
   return (
     <section className={s.catalog}>
       <h2 className="visually-hidden">Каталог</h2>
       <CatalogOptions onGetFilters={handleGetFilters} />
-      <CatalogProducts items={productsData} />
+      <CatalogProducts items={products} />
     </section>
   )
 }

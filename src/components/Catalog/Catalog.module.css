@@ -1,5 +1,6 @@
 .catalog {
   background-color: #fff;
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
