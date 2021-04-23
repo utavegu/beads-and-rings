@@ -3,74 +3,37 @@ import Button from '../../Button';
 import s from './CatalogOptions.module.css';
 import RangeSlider from './RangeSlider.jsx';
 
-export default function CatalogOptions() {
+export default function CatalogOptions({onGetFilters: handleGetFilters}) {
 
-  /*
-  const [options, setOptions] = useState({
-    presentation: {
-      cards: true,
-      list: false,
-    },
-    category: {
-      rings: true,
-      beads: true,
-    },
-    budget: {
-      min: null,
-      max: null,
-    }
-  })
-  */
-
-
-  // Вот эти 4 - 1 общий объект (смотри выше)
-  const [presentation, setPresentation] = useState({
-    activeView: "cards",
+  const [filters, setFilters] = useState({
+    view: "cards",
+    categoryRings: true,
+    categoryBeads: true,
+    budgetMin: '',
+    budgetMax: '',
+    sort: "name-ascending",
   })
 
-  const [category, setCategory] = useState({
-    rings: true,
-    beads: true,
-  })
-
-  const [budget, setBuget] = useState({
-    min: null,
-    max: null,
-  })
-
-  const [sort, setSort] = useState({
-    activeSort: "name-ascending",
-  })
-
-
-
-  // А эти 2 функции собираешь в одну и универсализируешь с помощью свитч-кейса
-  const handleChange = ({target}) => {
+  const handleChangeInput = ({target}) => {
     const name = target.name;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    setCategory(prevForm => ({...prevForm, [name]: value}));
-    // setBuget(prevForm => ({...prevForm, [name]: value}));
+    let value;
+    switch(target.type) {
+      case 'checkbox':
+        value = target.checked;
+        break;
+      case 'radio':
+        value = target.id;
+        break;
+      default:
+        value = target.value;
+        break;
+    }
+    setFilters(prev => ({...prev, [name]: value}));
   }
-
-  const checkOnlyOne = ({target}) => {
-    // setPresentation({activeView: target.name});
-    setSort({activeSort: target.name});
-  };
-
-
 
   const handleSubmit = evt => {
     evt.preventDefault();
-
-    // handleSend(options);
-
-    // сброс не понадобится
-    // setOptions({
-    //   presentation: '',
-    //   category: '',
-    //   budget: '',
-    //   sort: '',
-    // })
+    handleGetFilters(filters);
   }
 
   return (
@@ -86,9 +49,10 @@ export default function CatalogOptions() {
                 <input
                   className="visually-hidden"
                   type="radio"
-                  name="cards"
-                  checked={presentation.activeView === "cards"}
-                  onChange={checkOnlyOne}
+                  name="view"
+                  id="cards"
+                  checked={filters.view === "cards"}
+                  onChange={handleChangeInput}
                 />
                 <span className={`${s.custom_radio} ${s.list}`} title="Карточки"></span>
                 <span className="visually-hidden">Карточки</span>
@@ -99,9 +63,10 @@ export default function CatalogOptions() {
                 <input
                   className="visually-hidden"
                   type="radio"
-                  name="list"
-                  checked={presentation.activeView === "list"}
-                  onChange={checkOnlyOne} 
+                  name="view"
+                  id="list"
+                  checked={filters.view === "list"}
+                  onChange={handleChangeInput} 
                 />
                 <span className={`${s.custom_radio} ${s.module}`} title="Список"></span>
                 <span className="visually-hidden">Список</span>
@@ -118,9 +83,9 @@ export default function CatalogOptions() {
                 <input 
                   className="visually-hidden"
                   type="checkbox"
-                  name="rings"
-                  checked={category.rings}
-                  onChange={handleChange}
+                  name="categoryRings"
+                  checked={filters.categoryRings}
+                  onChange={handleChangeInput}
                 />
                 <span className={s.custom_checkbox}></span>
                 <span>Кольца</span>
@@ -131,9 +96,9 @@ export default function CatalogOptions() {
                 <input
                   className="visually-hidden"
                   type="checkbox"
-                  name="beads"
-                  checked={category.beads}
-                  onChange={handleChange}
+                  name="categoryBeads"
+                  checked={filters.categoryBeads}
+                  onChange={handleChangeInput}
                 />
                 <span className={s.custom_checkbox}></span>
                 <span>Изделия из бисера</span>
@@ -153,18 +118,18 @@ export default function CatalogOptions() {
             type="text"
             placeholder="от"
             pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"
-            name="min"
-            value={budget.min}
-            onChange={handleChange}
+            name="budgetMin"
+            value={filters.budgetMin}
+            onChange={handleChangeInput}
           />
           <input
             type="text"
             placeholder="до"
             pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"
             style={{float: "right"}}
-            name="max"
-            value={budget.max}
-            onChange={handleChange}
+            name="budgetMax"
+            value={filters.budgetMax}
+            onChange={handleChangeInput}
           />
         </fieldset>
 
@@ -178,9 +143,10 @@ export default function CatalogOptions() {
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="name-ascending"
-                    checked={sort.activeSort === "name-ascending"}
-                    onChange={checkOnlyOne}
+                    name="sort"
+                    id="name-ascending"
+                    checked={filters.sort === "name-ascending"}
+                    onChange={handleChangeInput}
                   />
                   <span className={`${s.custom_arrow} ${s.ascending}`} title="по возрастанию"></span>
                   <span className="visually-hidden">Возрастанию</span>
@@ -189,9 +155,10 @@ export default function CatalogOptions() {
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="name-descending"
-                    checked={sort.activeSort === "name-descending"}
-                    onChange={checkOnlyOne}
+                    name="sort"
+                    id="name-descending"
+                    checked={filters.sort === "name-descending"}
+                    onChange={handleChangeInput}
                   />
                   <span className={`${s.custom_arrow} ${s.descending}`} title="по убыванию"></span>
                   <span className="visually-hidden">Убыванию</span>
@@ -205,9 +172,10 @@ export default function CatalogOptions() {
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="price-ascending"
-                    checked={sort.activeSort === "price-ascending"}
-                    onChange={checkOnlyOne}
+                    name="sort"
+                    id="price-ascending"
+                    checked={filters.sort === "price-ascending"}
+                    onChange={handleChangeInput}
                   />
                   <span className={`${s.custom_arrow} ${s.ascending}`} title="по возрастанию"></span>
                   <span className="visually-hidden">Возрастанию</span>
@@ -216,9 +184,10 @@ export default function CatalogOptions() {
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="price-descending"
-                    checked={sort.activeSort === "price-descending"}
-                    onChange={checkOnlyOne}
+                    name="sort"
+                    id="price-descending"
+                    checked={filters.sort === "price-descending"}
+                    onChange={handleChangeInput}
                   />
                   <span className={`${s.custom_arrow} ${s.descending}`} title="по убыванию"></span>
                   <span className="visually-hidden">Убыванию</span>

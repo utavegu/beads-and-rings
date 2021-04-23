@@ -24,7 +24,7 @@ export default function Cart() {
           </thead>
           <tfoot>
             <tr>
-              <td colspan="5">Общая стоимость</td>
+              <td colSpan="5">Общая стоимость</td>
               <td>22 000 руб.</td>
               <td>
                 <button>Очистить корзину</button>
