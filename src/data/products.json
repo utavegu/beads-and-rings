@@ -131,7 +131,7 @@
     "type": "Изделие из бисера",
     "photo": "./img/cat.jpeg",
     "description": "Волшебная помогательная кися",
-    "price": "Бесценна",
+    "price": 7800,
     "sizes": ["универсальный"],
     "quantity": 1,
     "materials": ["бисер"],

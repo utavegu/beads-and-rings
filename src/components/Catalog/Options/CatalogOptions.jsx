@@ -3,7 +3,7 @@ import Button from '../../Button';
 import s from './CatalogOptions.module.css';
 import RangeSlider from './RangeSlider.jsx';
 
-export default function CatalogOptions({onGetFilters: handleGetFilters}) {
+export default function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) {
 
   const [options, setOptions] = useState({
     view: "cards",
@@ -12,8 +12,8 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
       beads: true,
     },
     budget: {
-      min: '',
-      max: '',
+      min: minBudget,
+      max: maxBudget,
     },
     sort: "name-ascending",
   })
@@ -119,7 +119,7 @@ export default function CatalogOptions({onGetFilters: handleGetFilters}) {
         </fieldset>
 
         <fieldset className={s.budget}>
-          <legend>Цена</legend>
+          <legend>Цена, &#8381;</legend>
 
           {/* 
           <RangeSlider />
