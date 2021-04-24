@@ -132,6 +132,7 @@ export default function CatalogOptions({onGetFilters: handleGetFilters, minBudge
             name="budget_min"
             value={options.budget.min}
             onChange={handleChangeInput}
+            required
           />
           <input
             type="text"
@@ -141,6 +142,7 @@ export default function CatalogOptions({onGetFilters: handleGetFilters, minBudge
             name="budget_max"
             value={options.budget.max}
             onChange={handleChangeInput}
+            required
           />
         </fieldset>
 

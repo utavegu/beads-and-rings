@@ -10,18 +10,17 @@ export default function Catalog() {
   ПРОПТАЙПС ДАВАЙ УЖЕ НАСТРАИВАЙ!!! КОМПОНЕНТЫ-ТО ПЛОДЯТСЯ!!!
   И в компоненте пора порядок навести
   */
-  // 3) Отображение
 
-  const [products, setProducts] = useState(productsData)
+  const [products, setProducts] = useState(productsData);
+  const [view, setView] = useState("cards");
 
+  // Определение минимальной и максимальной цены
   let allPrices = [];
   productsData.slice().forEach(product => allPrices.push(product.price));
   const minPrice = Math.min(...allPrices);
   const maxPrice = Math.max(...allPrices);
 
   const handleGetFilters = (filters) => {
-    // что касается отображения - скорее всего это просто отдельный флаг, исходя из значения которого будет отрисовываться тот или иной компонент. Но имей в виду, что вариантов отрисовки может быть больше, чем 2, потому на булево тут лучше не особо рассчитывай
-
     //СЛОВАРЬ (скорее всего в common.js пойдёт... кстати, создай его)
     const productTypeDict = {
       "rings": "Кольцо",
@@ -38,7 +37,7 @@ export default function Catalog() {
       .slice()
       .filter(product => categories.includes(product.type))
       .filter(product => product.price >= filters.budget.min && product.price <= filters.budget.max)
-      .sort((a, b) => { // Функцию сортировки бы тоже в common
+      .sort((a, b) => {
         switch(filters.sort) {
           case 'name-ascending':
             if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
@@ -56,14 +55,14 @@ export default function Catalog() {
         }
       })
     setProducts(filtredProducts);
-    console.log(filters);
+    setView(filters.view);
   }
 
   return (
     <section className={s.catalog}>
       <h2 className="visually-hidden">Каталог</h2>
       <CatalogOptions onGetFilters={handleGetFilters} minBudget={minPrice} maxBudget={maxPrice} />
-      <CatalogProducts items={products} />
+      <CatalogProducts items={products} view={view}/>
     </section>
   )
 }
