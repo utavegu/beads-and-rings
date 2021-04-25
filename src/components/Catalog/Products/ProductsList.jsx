@@ -2,8 +2,9 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import s from './ProductsList.module.css';
 import ProductString from './ProductString';
+import PropTypes from 'prop-types';
 
-export default function ProductsList({items, view}) {
+function ProductsList({items, view}) {
   const changeDisplay = () => {
     switch (view) {
       case "cards":
@@ -21,3 +22,10 @@ export default function ProductsList({items, view}) {
     </ul>
   )
 }
+
+ProductsList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  view: PropTypes.string,
+};
+
+export default ProductsList;

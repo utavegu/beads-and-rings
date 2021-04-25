@@ -3,8 +3,9 @@ import CatalogSearch from '../Search/CatalogSearch';
 import s from './CatalogProducts.module.css';
 import Button from '../../Button';
 import ProductsList from './ProductsList';
+import PropTypes from 'prop-types';
 
-export default function CatalogProducts({items, view}) {
+function CatalogProducts({items, view}) {
   const [searchQuery, setSearchQuery] = useState('');
   const [displayStep, setDisplayStep] = useState(6);
 
@@ -16,8 +17,16 @@ export default function CatalogProducts({items, view}) {
   return (
     <section className={s.products}>
       <CatalogSearch queryString={searchQuery} setSearchQuery={setSearchQuery} />
-      <ProductsList items={displayedItems} view={view} />
+      {(!!displayedItems.length) ? <ProductsList items={displayedItems} view={view} /> :
+      <p style={{textAlign: "center", fontSize: "larger"}}>По данному запросу ничего не найдено!</p>}
       {!(displayStep - displayedItems.length) && <Button onClick={() => setDisplayStep(displayStep + 6)} type="button">Загрузить ещё</Button>}
     </section>
   )
 }
+
+CatalogProducts.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  view: PropTypes.string,
+};
+
+export default CatalogProducts;

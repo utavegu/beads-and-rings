@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import Button from '../../Button';
 import s from './CatalogOptions.module.css';
 import RangeSlider from './RangeSlider.jsx';
+import PropTypes from 'prop-types';
 
-export default function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) {
+function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) {
 
   const [options, setOptions] = useState({
     view: "cards",
@@ -217,3 +218,12 @@ export default function CatalogOptions({onGetFilters: handleGetFilters, minBudge
     </section>
   )
 }
+
+CatalogOptions.propTypes = {
+  minBudget: PropTypes.number,
+  maxBudget: PropTypes.number,
+  onGetFilters: PropTypes.func,
+  // items: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+export default CatalogOptions;

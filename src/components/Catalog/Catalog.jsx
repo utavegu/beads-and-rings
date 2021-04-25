@@ -3,36 +3,24 @@ import s from './Catalog.module.css';
 import CatalogOptions from './Options/CatalogOptions';
 import CatalogProducts from './Products/CatalogProducts';
 import productsData from '../../data/products.json';
+import { productTypeDict } from '../../common';
 
 export default function Catalog() {
-  /* 
-  Данные хранятся в этом компоненте. И только состояние корзины глобально
-  ПРОПТАЙПС ДАВАЙ УЖЕ НАСТРАИВАЙ!!! КОМПОНЕНТЫ-ТО ПЛОДЯТСЯ!!!
-  И в компоненте пора порядок навести
-  */
+  // Данные хранятся в этом компоненте. И только состояние корзины глобально
 
   const [products, setProducts] = useState(productsData);
   const [view, setView] = useState("cards");
 
-  // Определение минимальной и максимальной цены
   let allPrices = [];
   productsData.slice().forEach(product => allPrices.push(product.price));
   const minPrice = Math.min(...allPrices);
   const maxPrice = Math.max(...allPrices);
 
   const handleGetFilters = (filters) => {
-    //СЛОВАРЬ (скорее всего в common.js пойдёт... кстати, создай его)
-    const productTypeDict = {
-      "rings": "Кольцо",
-      "beads": "Изделие из бисера",
-    };
-
-    // Фильтрация по категориям
     let categories = [];
     for (let category in filters.category) {      
       if (filters.category[category]) categories.push(productTypeDict[category]);
     }
-    
     const filtredProducts = productsData
       .slice()
       .filter(product => categories.includes(product.type))
