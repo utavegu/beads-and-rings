@@ -1,6 +1,5 @@
 .catalog {
   background-color: #fff;
-  height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -8,6 +7,7 @@
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: auto 1fr;
+    height: 100vh;
   }
 }
 
