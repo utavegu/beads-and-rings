@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import s from './ProductString.module.css';
 
 export default function ProductString({item}) {
@@ -9,9 +10,9 @@ export default function ProductString({item}) {
       </div>
       <h3>{item.name}</h3>
       <p>{item.price} &#8381;</p>
-      <a href="#" title="Посмотреть товар">
+      <Link to={`/${item.id}`} title="Посмотреть товар">
         <span className="visually-hidden">Посмотреть товар</span>
-      </a>
+      </Link>
       <button type="button" title="Добавить в корзину">
         <span className="visually-hidden">Добавить в корзину</span>
       </button>

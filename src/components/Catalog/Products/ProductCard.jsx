@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../Button';
 import s from './ProductCard.module.css';
 
@@ -9,7 +10,7 @@ export default function ProductCard({item}) {
         <img src={item.photo} alt={item.name} />
       </div>
       <div className={s.card_options}>
-        <a href="#">Посмотреть товар</a>
+        <Link to={`/${item.id}`}>Посмотреть товар</Link>
         <Button type="button">Добавить в корзину</Button>
       </div>
       <div>
