@@ -13,9 +13,6 @@ export default function ProductString({item}) {
       <Link to={`/${item.id}`} title="Посмотреть товар">
         <span className="visually-hidden">Посмотреть товар</span>
       </Link>
-      <button type="button" title="Добавить в корзину">
-        <span className="visually-hidden">Добавить в корзину</span>
-      </button>
     </li>
   )
 }

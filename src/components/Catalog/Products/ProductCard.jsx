@@ -11,7 +11,6 @@ export default function ProductCard({item}) {
       </div>
       <div className={s.card_options}>
         <Link to={`/${item.id}`}>Посмотреть товар</Link>
-        <Button type="button">Добавить в корзину</Button>
       </div>
       <div>
         <h3 className={s.product_name}>{item.name}</h3>

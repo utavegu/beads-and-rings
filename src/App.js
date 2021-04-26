@@ -5,7 +5,7 @@ import Catalog from "./components/Catalog/Catalog";
 import About from "./components/About/About";
 import Stocks from "./components/Stocks/Stocks";
 import Cart from "./components/Cart/Cart";
-import ProductPage from "./components/Catalog/ProductPage/ProductPage";
+import ProductPage from "./components/Product/ProductPage";
 import Page404 from "./components/Page404/Page404";
 
 function App() {

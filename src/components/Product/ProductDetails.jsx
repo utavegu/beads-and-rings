@@ -1,23 +1,24 @@
 import React from 'react';
-import s from './ProductPage.module.css';
-import Button from '../../Button';
-import productsData from '../../../data/products.json'
+import PropTypes from 'prop-types';
+import s from './ProductDetails.module.css';
+import Button from '../Button';
 
-const findById = (products, id) => products.find(product => product.id === id);
+function ProductDetails({product}) {
 
-export default function ProductPage({ match }) {
-  const product = findById(productsData, Number(match.params.id));
+  const sizeChooserStyle = {
+    display: "inline-block",
+    marginRight: "10px",
+    textDecoration: "underline",
+  }
+
   return (
-    <section className={s.product_page}>
-      <h2>{product.name}</h2>
+    <>
+      <h2 className={s.product_heading}>{product.name}</h2>
       <div className={s.product_container}>
         <div className={s.product_photo}>
           <picture>
-            {/* <source media="(min-width: 1200px)" srcSet={"http://placehold.it/800"} /> */}
             <source media="(min-width: 1200px)" srcSet={product.photo} />
-            {/* <source media="(min-width: 768px)" srcSet="http://placehold.it/600" /> */}
             <source media="(min-width: 768px)" srcSet={product.photo} />
-            {/* <img src="http://placehold.it/320" alt="Фотография товара"/> */}
             <img src={product.photo} alt="Фотография товара"/>
           </picture>
         </div>
@@ -28,17 +29,26 @@ export default function ProductPage({ match }) {
           <dd>{product.price} руб.</dd>
           <dt>Тип:</dt>
           <dd>{product.type}</dd>
-          <dt>Размер:</dt>
-          <dd>{product.sizes}</dd>
           <dt>Вес:</dt>
           <dd>{product.weight} г.</dd>
           <dt>Материаы:</dt>
-          <dd>{product.materials}</dd>
+          <dd>{product.materials.join(", ")}</dd>
           <dt>Цвет:</dt>
-          <dd>{product.color}</dd>
+          <dd>{product.color.join(", ")}</dd>
+          <dt>Размер:</dt>
+          <dd>{product.sizes.map(o => <div style={sizeChooserStyle}>{o.size}</div>)}</dd>
+          <dt>Количество:</dt>
+          <dd>{product.sizes[0].quantity}</dd>
         </dl>
         <Button type="button" isDisabled={true}>Добавить в корзину</Button>
       </div>
-    </section>
+    </>
   )
 }
+
+ProductDetails.propTypes = {
+
+}
+
+export default ProductDetails
+
