@@ -39,7 +39,7 @@
     "description": "Ношение помогает придти к миру и согласии в душе.",
     "price": 2000,
     "sizes": [
-      {"size": "16.5","quantity": 1},
+      {"size": "16.5","quantity": 2},
       {"size": "20.5","quantity": 2},
       {"size": "21","quantity": 1}
     ],
@@ -56,7 +56,7 @@
     "description": "Отгоняет нечисть, демонов, духов, вампиров...",
     "price": 999,
     "sizes": [
-      {"size": "15.5","quantity": 1},
+      {"size": "15.5","quantity": 3},
       {"size": "17.5","quantity": 2},
       {"size": "20.5","quantity": 1}
     ],
@@ -104,7 +104,6 @@
     "price": 2400,
     "sizes": [
       {"size": "21","quantity": 1},
-      {"size": "21.5","quantity": 2},
       {"size": "23","quantity": 1}
     ],
     "materials": ["кость"],
@@ -135,8 +134,8 @@
     "description": "Ролевики и фанаты Мельницы очень ценят такие кольца.",
     "price": 5700,
     "sizes": [
-      {"size": "16.5","quantity": 1},
-      {"size": "18","quantity": 2},
+      {"size": "16.5","quantity": 2},
+      {"size": "18","quantity": 3},
       {"size": "21.5","quantity": 1}
     ],
     "materials": ["серебро"],

@@ -50,6 +50,26 @@
   margin-bottom: 10px;
 }
 
+.size_chooser {
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.size_chooser:hover {
+  color: #b2a17a;
+}
+
+.selected_size {
+  text-decoration: underline;
+}
+
+.quantity_chooser {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (min-width: 768px) { 
   .product_container {
     display: grid;
