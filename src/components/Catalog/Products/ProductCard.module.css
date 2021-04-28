@@ -49,10 +49,43 @@
 }
 
 .card_options {
+  position: relative;
   display: none;
+  margin: 0 auto;
   width: 270px;
   height: 270px;
-  padding-top: 50px;
+}
+
+.card_options::after {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  bottom: 0;
+  left: calc(50% - (150px / 2));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../../img/icons/eye-close-150.png);
+}
+
+.card_options:hover::after {
+  background-image: url(../../../img/icons/eye-open-150.png);
+}
+
+.card_options a {
+  font-size: 42px;
+  color: transparent;
+  background-clip: text;
+	background-image: linear-gradient(to right, red, orange, yellow, green, lightblue, blue, violet);
+}
+
+.card_options a:hover {
+  animation: rainbowOverflow 3s infinite ease-in-out;
+}
+
+@keyframes rainbowOverflow { 
+  from {filter: hue-rotate(0deg);}  
+  to {filter: hue-rotate(360deg);}
 }
 
 .product_name {

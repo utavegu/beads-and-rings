@@ -31,17 +31,17 @@ export default function Footer() {
 
           <ul className={s.social_list}>
 						<li>
-							<a className={`${s.social_item} ${s.social_item__vk}`} href="#" title="Вконтакте">
+							<a className={`${s.social_item} ${s.social_item__vk}`} href="https://vk.com/" title="Вконтакте">
 								<span className="visually-hidden">Вконтакте</span>
 							</a>
 						</li>
 						<li>
-							<a className={`${s.social_item} ${s.social_item__fb}`} href="#" title="Фейсбук">
+							<a className={`${s.social_item} ${s.social_item__fb}`} href="https://www.facebook.com/" title="Фейсбук">
 								<span className="visually-hidden">Фэйсбук</span>
 							</a>
 						</li>
 						<li>
-							<a className={`${s.social_item} ${s.social_item__inst}`} href="#" title="Инстаграм">
+							<a className={`${s.social_item} ${s.social_item__inst}`} href="https://www.instagram.com/" title="Инстаграм">
 								<span className="visually-hidden">Инстаграм</span>
 							</a>
 						</li>

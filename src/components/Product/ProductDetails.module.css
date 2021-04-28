@@ -70,6 +70,35 @@
   justify-content: space-between;
 }
 
+.quantity_chooser button {
+  background-color: #b2a17a;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.quantity_chooser button:disabled {
+  opacity: 0.5;
+}
+
+.subtract {
+  background-image: url(../../img/icons/minus_24dp.svg);
+}
+
+.add {
+  background-image: url(../../img/icons/plus_24dp.svg);
+}
+
+.product_container sup {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) { 
   .product_container {
     display: grid;

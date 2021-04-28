@@ -1,4 +1,4 @@
-import React, { Profiler } from 'react';
+import React from 'react';
 import s from './ProductPage.module.css';
 import productsData from '../../data/products.json'
 import ProductDetails from './ProductDetails';
@@ -22,8 +22,7 @@ function ProductPage({ match }) {
 }
 
 ProductPage.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  view: PropTypes.string,
+  match: PropTypes.object.isRequired,
 };
 
 export default ProductPage;

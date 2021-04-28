@@ -37,7 +37,7 @@ function ProductDetails({product}) {
           <dd>{product.materials.join(", ")}</dd>
           <dt>Цвет:</dt>
           <dd>{product.color.join(", ")}</dd>
-          <dt>Размер:</dt>
+          <dt>Размер<sup title="Чтобы узнать ваш размер, обмотайте нужный палец ниткой, затем линейкой замерьте полученную длину нитки в милиметрах">?</sup>:</dt>
           <dd>{product.sizes.map(o => 
             <span
               className={`${s.size_chooser} ${(o.size === selectedSize) && s.selected_size}`}
@@ -52,10 +52,23 @@ function ProductDetails({product}) {
             {amountThisSize
             ?
             <div className={s.quantity_chooser}>
-              {/* Тут надо будет замемозить maxQuantity(когда оно первый раз инициализируется), и блочить плюсик, если текущее значение равно макс квантити. И минусик - если единице. */}
-              <button onClick={() => setAmountThisSize(amountThisSize - 1)} disabled={amountThisSize === 1}>-</button>
+              <button
+                className={s.subtract}
+                onClick={() => setAmountThisSize(amountThisSize - 1)}
+                disabled={amountThisSize === 1}
+                title="Убавить"
+              >
+                <span className="visually-hidden">Subtract</span>
+              </button>
               <span>{amountThisSize}</span>
-              <button onClick={() => setAmountThisSize(amountThisSize + 1)} disabled={amountThisSize === (product.sizes.find(o => o.size === selectedSize)).quantity}>+</button>
+              <button
+                className={s.add}
+                onClick={() => setAmountThisSize(amountThisSize + 1)}
+                disabled={amountThisSize === (product.sizes.find(o => o.size === selectedSize)).quantity}
+                title="Добавить"
+              >
+                <span className="visually-hidden">Add</span>
+              </button>
             </div>
             :
             <span style={{color: "#fff"}}>Выберите размер</span>
@@ -69,7 +82,7 @@ function ProductDetails({product}) {
 }
 
 ProductDetails.propTypes = {
-
+  product: PropTypes.object.isRequired,
 }
 
 export default ProductDetails

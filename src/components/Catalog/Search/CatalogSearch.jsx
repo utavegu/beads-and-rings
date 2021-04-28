@@ -10,7 +10,7 @@ function CatalogSearch({queryString, setSearchQuery}) {
 
   return (
     <section className={s.search}>
-      <form>
+      <form onSubmit={evt => evt.preventDefault()}>
         <label htmlFor="search-products" className="visually-hidden">Поиск</label>
         <input
           className={s.search_field}

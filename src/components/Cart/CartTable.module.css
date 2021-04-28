@@ -1,0 +1,38 @@
+.estimate {
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  border-spacing: 10px;
+  caption-side: bottom;
+  /* border-collapse: collapse; */
+  border: 1px solid red;
+  background-color: floralwhite;
+}
+
+.estimate thead {
+  background-color: #ffaabb55;
+}
+
+.estimate tbody tr:nth-child(odd) {
+  background-color: #11aaff55;
+}
+
+.estimate tbody tr:nth-child(even) {
+  background-color: pink;
+}
+
+.estimate tfoot {
+  background-color: #66aa1155;
+}
+
+.estimate tr {
+  border: 1px solid yellow;
+}
+
+.estimate th {
+  border: 1px solid green;
+}
+
+.estimate td {
+  border: 1px solid blue;
+}
