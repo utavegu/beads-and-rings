@@ -5,71 +5,51 @@ import PropTypes from 'prop-types';
 function CartTable(props) {
   return (
     <table className={s.estimate}>
-      <caption className="visually-hidden">Товары в корзине</caption>
+      <caption>Товары в корзине</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Название</th>
           <th scope="col">Размер</th>
           <th scope="col">Кол-во</th>
-          <th scope="col">Стоимость</th>
+          <th scope="col">Цена</th>
           <th scope="col">Итого</th>
           <th scope="col">Действия</th>
         </tr>
       </thead>
       <tfoot>
         <tr>
-          <td colSpan="5">Общая стоимость</td>
+          <td colSpan="5" style={{textAlign: "right"}}>Общая стоимость:</td>
           <td>22 000 руб.</td>
           <td>
-            <button>Очистить корзину</button>
+            <button className={s.button_clear} title="Очистить корзину" style={{width: "100%"}}>
+              <span className="visually-hidden">Очистить корзину</span>
+            </button>
           </td>
         </tr>
       </tfoot>
       <tbody>
+
         <tr>
-          <th scope="row">1</th>
-          <td><a href="/products/1.html">Модное кольцо</a></td>
-          <td>XXL</td>
+          <th scope="row" style={{border: "none"}}>1</th>
+          <td className={s.product_name}>Модное дофига кольцо ваще очень бери скидку сделаю большую вах больше чем у конкурента справа в полтора раза</td>
+          <td>23.5</td>
           <td>3</td>
           <td>2 000 руб.</td>
           <td>6 000 руб.</td>
-          <td>
-            <button>+</button>
-            <button>-</button>
-            <button>х</button>
+          <td className={s.actions}>
+            <button className={s.button_add} title="Добавить">
+              <span className="visually-hidden">Добавить</span>
+            </button>
+            <button className={s.button_subtract} title="Убавить">
+              <span className="visually-hidden">Убавить</span>
+            </button>
+            <button className={s.button_remove} title="Удалить позицию">
+              <span className="visually-hidden">Удалить позицию</span>
+            </button>
           </td>
         </tr>
 
-        <tr>
-          <th scope="row">2</th>
-          <td><a href="/products/1.html"> ЕЩЁ БОЛЕЕ Модное кольцо</a></td>
-          <td>XXS</td>
-          <td>2</td>
-          <td>2 000 руб.</td>
-          <td>4 000 руб.</td>
-          <td><button>Удалить</button></td>
-        </tr>
-
-        <tr>
-          <th scope="row">3</th>
-          <td><a href="/products/1.html">МЕНЕЕ Модное кольцо</a></td>
-          <td>M</td>
-          <td>1</td>
-          <td>2 000 руб.</td>
-          <td>2 000 руб.</td>
-          <td><button>Удалить</button></td>
-        </tr>
-
-        <tr>
-          <th scope="row">4</th>
-          <td><a href="/products/1.html">НЕ Модное кольцо</a></td>
-          <td>S</td>
-          <td>5</td>
-          <td>2 000 руб.</td>
-          <td>10 000 руб.</td>
-          <td><button>Удалить</button></td>
-        </tr>
       </tbody>
     </table>
   )

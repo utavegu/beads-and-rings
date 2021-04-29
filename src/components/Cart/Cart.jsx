@@ -9,13 +9,13 @@ export default function Cart() {
     <section className={s.cart}>
       <h2 className="visually-hidden">Корзина</h2>
       <section>
-        <h3>Товары в корзине</h3>
         <CartTable />
       </section>
 
     {/*     
     <section className="order">
       <h3 className="text-center">Оформить заказ</h3>
+      нужен ли вообще? ну в целом не помешает
       <div className="card" 
       // style="max-width: 30rem; margin: 0 auto;"
       >
