@@ -32,7 +32,7 @@ function CartTable(props) {
 
         <tr>
           <th scope="row" style={{border: "none"}}>1</th>
-          <td className={s.product_name}>Модное дофига кольцо ваще очень бери скидку сделаю большую вах больше чем у конкурента справа в полтора раза</td>
+          <td className={s.product_name}>Модное дофига кольцо</td>
           <td>23.5</td>
           <td>3</td>
           <td>2 000 руб.</td>

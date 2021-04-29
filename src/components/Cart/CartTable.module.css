@@ -4,7 +4,7 @@
   vertical-align: middle;
   caption-side: bottom;
   border-collapse: collapse;
-  font-family: "BalsamiqSans-Regular", "Luminari", fantasy;
+  font-family: "BalsamiqSans-Regular", "Comic Sans MS", sans-serif;
   font-weight: 400;
   font-size: 14px;
   width: 320px;
@@ -45,7 +45,7 @@
 }
 
 .estimate th {
-  font-family: "BalsamiqSans-Bold", "Luminari", fantasy;
+  font-family: "BalsamiqSans-Bold", "Comic Sans MS", sans-serif;
   font-weight: 700;
   padding: 1px;
 }
