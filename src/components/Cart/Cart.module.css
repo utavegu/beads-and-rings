@@ -1,5 +1,6 @@
 .cart {
   background-color: #b2a17a;
+  min-height: 400px; /*ВРЕМЕННО*/
   /* background-color: floralwhite; */
 }
 
