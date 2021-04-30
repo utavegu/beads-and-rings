@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import s from './Header.module.css';
-import logo from '../../img/wizard-hat.png'
+import logo from '../../img/wizard-hat.png';
+import CartContext from '../../contexts/CartContext'
 
 export default function Header() {
+  const {cart} = useContext(CartContext);
+  /* Ну только в итоге не длину массива, а сумму значений всех квантити */
   return (
     <header className={s.header}>
 
@@ -29,6 +32,7 @@ export default function Header() {
       </nav>
 
       <Link to="/cart" className={s.shopping_cart} title="Корзина">
+        <div style={{backgroundColor: "red", color: "white", fontSize: 38, textAlign: "center"}}>{cart.length}</div>
         <span className="visually-hidden">Корзина</span>
       </Link>
 

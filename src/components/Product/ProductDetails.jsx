@@ -1,19 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import s from './ProductDetails.module.css';
 import Button from '../Button';
+import { getCartData } from '../../common';
+import CartContext from '../../contexts/CartContext'
 
-function ProductDetails({product}) {
+function ProductDetails({product, history}) {
 
   const [selectedSize, setSelectedSize] = useState(null);
   const [amountThisSize, setAmountThisSize] = useState(null)
+  const {addToCart} = useContext(CartContext);
 
+  const totalExemplars = selectedSize && product.sizes.find(o => o.size === selectedSize).quantity;
+  
   const handleChooseSize = (size) => {
     setSelectedSize(size);
     setAmountThisSize((product.sizes.find(o => o.size === size)).quantity);
   }
 
-  console.log(localStorage);
+  const handleAddProduct = () => {
+    const productList = getCartData();
+    const productItem = {
+      id: product.id,
+      name: product.name,
+      size: selectedSize,
+      quantity: amountThisSize,
+      price: product.price,
+    }
+    const sameProduct = productList.find(el => 
+      el.id === productItem.id
+      &&
+      el.size === productItem.size
+      &&
+      el.price === productItem.price
+    );
+    if (sameProduct) {
+      sameProduct.quantity += productItem.quantity;
+      if (sameProduct.quantity > totalExemplars) sameProduct.quantity = totalExemplars;
+    } else {
+      productList.push(productItem);
+    }
+    addToCart(productList);
+    history.push("/cart");
+  }
 
   return (
     <>
@@ -66,7 +95,7 @@ function ProductDetails({product}) {
               <button
                 className={s.add}
                 onClick={() => setAmountThisSize(amountThisSize + 1)}
-                disabled={amountThisSize === (product.sizes.find(o => o.size === selectedSize)).quantity}
+                disabled={amountThisSize === totalExemplars}
                 title="Добавить"
               >
                 <span className="visually-hidden">Add</span>
@@ -77,7 +106,7 @@ function ProductDetails({product}) {
             }
           </dd>
         </dl>
-        <Button type="button" isDisabled={!selectedSize}>Добавить в корзину</Button>
+        <Button onClick={handleAddProduct} type="button" isDisabled={!selectedSize}>Добавить в корзину</Button>
       </div>
     </>
   )

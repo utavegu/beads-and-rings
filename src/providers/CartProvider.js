@@ -1,5 +1,5 @@
 import React from 'react';
-import CartContext from './contexts/CartContext';
+import CartContext from '../contexts/CartContext';
 import { getCartData, setCartData } from '../common';
 
 export default function RecipesProvider(props) {
@@ -11,17 +11,10 @@ export default function RecipesProvider(props) {
     setCart(arrayOfItems);
   }
 
-  const allData = {
-    addToCart,
-    /*
-    query, setQuery,
-    urlParams, setUrlParams,
-    productList, setProductList,
-    */
-  };
+  const cartData = {cart, addToCart};
 
   return (
-    <CartContext.Provider value={allData}>
+    <CartContext.Provider value={cartData}>
       {props.children}
     </CartContext.Provider>
   )

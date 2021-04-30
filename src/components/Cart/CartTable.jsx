@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import s from './CartTable.module.css';
 import PropTypes from 'prop-types';
+import CartContext from '../../contexts/CartContext'
 
 function CartTable(props) {
+  const {cart} = useContext(CartContext);
+  console.log(cart);
+
+  /*
+  "Очистить корзину" сразу реализуй, чтобы каждый раз не париться с очисткой истории браузера
+  И оберни в линки названия товара
+  */
+
   return (
     <table className={s.estimate}>
       <caption>Товары в корзине</caption>
