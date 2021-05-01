@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import s from './CartTable.module.css';
 import PropTypes from 'prop-types';
 import CartContext from '../../contexts/CartContext';
 import { Link } from 'react-router-dom';
 
-function TableRow({item, index}) {
+function TableRow({item, orderNumber, onRemove: handleRemove, onAdd: handleAdd}) {
   return (
     <tr>
-      <th scope="row" style={{border: "none"}}>{index + 1}</th>
+      <th scope="row" style={{border: "none"}}>{orderNumber + 1}</th>
       <td className={s.product_name}>
         <Link to={`/${item.id}`}>{item.name}</Link>
       </td>
@@ -16,15 +16,30 @@ function TableRow({item, index}) {
       <td>{item.price} руб.</td>
       <td>{item.price * item.quantity} руб.</td>
       <td className={s.actions}>
-        <button className={s.button_add} title="Добавить">
+
+        <button
+          className={s.button_add}
+          onClick={() => handleAdd(orderNumber)}
+          title="Добавить"
+        >
           <span className="visually-hidden">Добавить</span>
         </button>
-        <button className={s.button_subtract} title="Убавить">
+
+        <button
+          className={s.button_subtract}
+          title="Убавить"
+        >
           <span className="visually-hidden">Убавить</span>
         </button>
-        <button className={s.button_remove} title="Удалить позицию">
+
+        <button
+          className={s.button_remove}
+          onClick={() => handleRemove(orderNumber)}
+          title="Удалить позицию"
+        >
           <span className="visually-hidden">Удалить позицию</span>
         </button>
+
       </td>
     </tr>
   )
@@ -41,6 +56,16 @@ function CartTable(props) {
 
   const handleClearCart = () => {
     addToCart([]);
+  }
+
+  const handleRemove = orderNumber => {
+    addToCart(cart.filter((_, id) => id !== orderNumber));
+  }
+
+  const handleAdd = orderNumber => {
+    let test = cart.find((_, id) => id === orderNumber);
+    test.quantity += 1;
+    addToCart(cart);
   }
 
   return (
@@ -69,7 +94,13 @@ function CartTable(props) {
         </tr>
       </tfoot>
       <tbody>
-        {cart.map((product, id) => <TableRow item={product} index={id} key={product.name + product.size} />)}
+        {cart.map((product, id) => <TableRow
+          item={product}
+          orderNumber={id}
+          key={product.name + product.size}
+          onRemove={handleRemove}
+          onAdd={handleAdd}
+        />)}
       </tbody>
     </table>
   )

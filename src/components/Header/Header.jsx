@@ -6,7 +6,11 @@ import CartContext from '../../contexts/CartContext'
 
 export default function Header() {
   const {cart} = useContext(CartContext);
-  /* Ну только в итоге не длину массива, а сумму значений всех квантити */
+
+  const quantityInCart = cart
+    .map(elem => elem.quantity)
+    .reduce((sum, elem) => sum + elem, 0);
+
   return (
     <header className={s.header}>
 
@@ -32,7 +36,7 @@ export default function Header() {
       </nav>
 
       <Link to="/cart" className={s.shopping_cart} title="Корзина">
-        <div style={{backgroundColor: "red", color: "white", fontSize: 38, textAlign: "center"}}>{cart.length}</div>
+        <div style={{backgroundColor: "red", color: "white", fontSize: 38, textAlign: "center"}}>{quantityInCart}</div>
         <span className="visually-hidden">Корзина</span>
       </Link>
 
