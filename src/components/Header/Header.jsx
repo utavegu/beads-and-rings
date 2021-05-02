@@ -36,7 +36,9 @@ export default function Header() {
       </nav>
 
       <Link to="/cart" className={s.shopping_cart} title="Корзина">
-        <div style={{backgroundColor: "red", color: "white", fontSize: 38, textAlign: "center"}}>{quantityInCart}</div>
+        <div className={s.count_indicator}>
+          <span>{quantityInCart}</span>
+        </div>
         <span className="visually-hidden">Корзина</span>
       </Link>
 

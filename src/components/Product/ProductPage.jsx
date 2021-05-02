@@ -23,6 +23,7 @@ function ProductPage({ match, history }) {
 
 ProductPage.propTypes = {
   match: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default ProductPage;

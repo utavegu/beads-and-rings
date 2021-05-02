@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import s from './CartTable.module.css';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ function TableRow({item, orderNumber, onRemove: handleRemove, onChangeQuantity: 
       <td>{item.size}</td>
       <td>{item.quantity}</td>
       <td>{item.price} руб.</td>
-      <td>{item.price * item.quantity} руб.</td>
+      <td className={s.col_sum}>{item.price * item.quantity} руб.</td>
       <td className={s.actions}>
 
         <button
@@ -44,8 +44,13 @@ function TableRow({item, orderNumber, onRemove: handleRemove, onChangeQuantity: 
       </td>
     </tr>
   )
+}
 
-  /* СЮДА ТОЖЕ ПРОПТАЙПСЫ */
+TableRow.propTypes = {
+  item: PropTypes.object.isRequired,
+  orderNumber: PropTypes.number,
+  onRemove: PropTypes.func,
+  onChangeQuantity: PropTypes.func,
 }
 
 function CartTable({cart, addToCart}) {
@@ -112,7 +117,8 @@ function CartTable({cart, addToCart}) {
 }
 
 CartTable.propTypes = {
-
+  cart: PropTypes.arrayOf(PropTypes.object).isRequired,
+  addToCart: PropTypes.func.isRequired,
 }
 
 export default CartTable

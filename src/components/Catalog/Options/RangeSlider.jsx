@@ -38,11 +38,13 @@ const AirbnbSlider = withStyles({
 
 
 
-export default function CustomizedSlider() {
+export default function CustomizedSlider({currentMin, currentMax, maxBudget}) {
   return (
     <AirbnbSlider
       getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
-      defaultValue={[30, 70]}
+      value={[currentMin, currentMax]}
+      min={0}
+      max={maxBudget}
     />
   );
 }

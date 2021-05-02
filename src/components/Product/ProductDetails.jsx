@@ -114,6 +114,7 @@ function ProductDetails({product, history}) {
 
 ProductDetails.propTypes = {
   product: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 }
 
 export default ProductDetails

@@ -86,5 +86,5 @@ button:focus,
 input:focus,
 select:focus {
   outline: none;
-  box-shadow: 0 0 5px 3px #ff000050;
+  box-shadow: 0 0 5px 3px #ff000030;
 }

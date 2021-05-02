@@ -121,11 +121,13 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
 
         <fieldset className={s.budget}>
           <legend>Цена, &#8381;</legend>
-
-          {/* 
-          <RangeSlider />
-           */}
-
+          {/*
+          <RangeSlider 
+            currentMin={Number(options.budget.min)}
+            currentMax={Number(options.budget.max)}
+            maxBudget={maxBudget}
+          />
+          */}
           <input
             type="text"
             placeholder="от"
@@ -223,7 +225,6 @@ CatalogOptions.propTypes = {
   minBudget: PropTypes.number,
   maxBudget: PropTypes.number,
   onGetFilters: PropTypes.func,
-  // items: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default CatalogOptions;

@@ -5,12 +5,21 @@
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
   padding: 20px 10px 20px 10px;
+  cursor: url(../../img/icons/magic-wand-2-50x50.png) 4 12, auto;;
+}
+
+.header a {
+  cursor: inherit;
 }
 
 .logo {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   justify-self: center;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 5px #000) drop-shadow(0 0 10px darkviolet);
 }
 
 .nav {
@@ -63,15 +72,54 @@
   width: 48px;
   height: 48px;
   filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 3px darkviolet);
+
+  position: relative;
 }
 
-.shopping_cart:hover {
+.count_indicator {
+  background-color: #2e2e2e;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count_indicator span {
+  margin: 0;
+  padding: 0 0 8px 0;
+  color: #fff;
 }
 
 
 @media (min-width: 768px) {
-
+  @keyframes wiggle {
+    0% {transform: rotate(0deg);}
+    10% {transform: rotate(70deg);}
+    20% {transform: rotate(-70deg);}
+    30% {transform: rotate(45deg);}
+    40% {transform: rotate(-45deg);}
+    50% {transform: rotate(25deg);}
+    60% {transform: rotate(-25deg);}
+    70% {transform: rotate(15deg);}
+    80% {transform: rotate(-15deg);}
+    90% {transform: rotate(7deg);}
+    100% {transform: rotate(0deg);}
+  }
+  
+  .shopping_cart:hover {
+    animation-name: wiggle;
+    animation-duration: 5s;
+  }
 }
 
 @media (min-width: 1200px) {
