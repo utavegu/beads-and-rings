@@ -1,6 +1,11 @@
 import React from 'react';
 import s from './About.module.css';
 import DetailedAccordion from './DetailedAccordion';
+import elven from '../../img/elven_300x451.jpg';
+import archer from '../../img/archer_300x298.jpg';
+import awards_desktop from '../../img/awards_1100x587.jpg';
+import awards_tablet from '../../img/awards_900x480.jpg';
+import awards_mobile from '../../img/awards_300x297.jpg';
 
 export default function About() {
   return (
@@ -9,20 +14,20 @@ export default function About() {
         <h2>О нас</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <figure className={`${s.photo} ${s.sorcerer}`}>
-          <img src="http://placehold.it/300x450" alt="Фото Марины с эльфийской фотосессии" width="300px" height="450px"/>
+          <img src={elven} alt="Фото Марины с эльфийской фотосессии" width="300px" height="451px"/>
           <figcaption>Говорят, не обошлось без эльфийской магии...</figcaption>
         </figure>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         <figure className={`${s.photo} ${s.archer}`}>
-          <img src="http://placehold.it/300x450" alt="Фото Ильи с луком" width="300px" height="450px"/>
+          <img src={archer} alt="Фото Ильи с луком" width="300px" height="298px"/>
           <figcaption>Мастер над кольцами</figcaption>
         </figure>
         <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
         <figure className={`${s.photo} ${s.prizes}`}>
           <picture>
-            <source media="(min-width: 1200px)" srcSet="http://placehold.it/1100x600" />
-            <source media="(min-width: 768px)" srcSet="http://placehold.it/900x500" />
-            <img src="http://placehold.it/300" alt="Фото их стрелковых наград"/>
+            <source media="(min-width: 1200px)" srcSet={awards_desktop} />
+            <source media="(min-width: 768px)" srcSet={awards_tablet} />
+            <img src={awards_mobile} alt="Фото их стрелковых наград"/>
           </picture>
           <figcaption>Их артефакты добавляют +100 к меткости. Но это не точно.</figcaption>
         </figure>

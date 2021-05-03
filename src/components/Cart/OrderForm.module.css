@@ -1,0 +1,50 @@
+.order form {
+  margin: 0 auto;
+  background-color: #2e2e2e;
+  padding: 5px;
+}
+
+.order label {
+  color: #b2a17a;
+  display: block;
+  text-align: center;
+}
+
+.order input,
+.order select {
+  width: 300px;
+  color: #2e2e2e;
+  background-color: #b2a17a;
+  margin: 0 auto;
+  display: block;
+}
+
+.order button {
+  line-height: 10px;
+  margin: 10px auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .order form {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .order p {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .order input,
+  .order select {
+    width: 320px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .order form {
+    width: 800px;
+  }
+}

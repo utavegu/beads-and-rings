@@ -14,6 +14,7 @@ function CatalogSearch({queryString, setSearchQuery}) {
         <label htmlFor="search-products" className="visually-hidden">Поиск</label>
         <input
           className={s.search_field}
+          type="search"
           id="search-products"
           placeholder="Поиск"
           value={queryString}
