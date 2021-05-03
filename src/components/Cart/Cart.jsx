@@ -25,7 +25,7 @@ export default function Cart() {
         :
         <p style={emptyCartStyle}>В корзине пусто! Чтобы помочь корзине победить пустоту внутри - пригляди себе что-нибудь в <Link to="/" style={{color: "inherit", textDecoration: "underline"}}>каталоге</Link></p>}
       </section>
-      {cart.length && <OrderForm />}
+      {cart.length && <OrderForm cart={cart} addToCart={addToCart} />}
     </section>
   )
 }
