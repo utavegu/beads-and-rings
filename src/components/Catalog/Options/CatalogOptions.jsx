@@ -12,12 +12,15 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
       rings: true,
       beads: true,
     },
-    budget: {
-      min: minBudget,
-      max: maxBudget,
-    },
+    // Пока оставлю, на всякий случай, вдруг передумаю
+    // budget: {
+    //   min: minBudget,
+    //   max: maxBudget,
+    // },
     sort: "name-ascending",
   })
+  const [budgetMin, setBudgetMin] = useState(minBudget);
+  const [budgetMax, setBudgetMax] = useState(maxBudget);
 
   const handleChangeInput = ({target}) => {
     const [subObject, name] = target.name.split("_");
@@ -43,9 +46,15 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
     setOptions(newState);
   };
 
+  const getCoordinates = (coordinates) => {
+    const [minCoord, maxCoord] = coordinates;
+    setBudgetMin(minCoord);
+    setBudgetMax(maxCoord);
+  }
+
   const handleSubmit = evt => {
     evt.preventDefault();
-    handleGetFilters(options);
+    handleGetFilters(options, budgetMin, budgetMax);
   }
 
   return (
@@ -121,31 +130,31 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
 
         <fieldset className={s.budget}>
           <legend>Цена, &#8381;</legend>
-          {/*
           <RangeSlider 
-            currentMin={Number(options.budget.min)}
-            currentMax={Number(options.budget.max)}
+            currentMin={Number(budgetMin)}
+            currentMax={Number(budgetMax)}
             maxBudget={maxBudget}
+            getCoordinates={getCoordinates}
           />
-          */}
           <input
+            // При такой реализации тут должны быть не инпуты, но оставлю так, на случай, если надо будет переделать
             type="text"
             placeholder="от"
-            pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"
+            // pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"
             name="budget_min"
-            value={options.budget.min}
-            onChange={handleChangeInput}
-            required
+            value={budgetMin}
+            // onChange={handleChangeInput}
+            disabled
           />
           <input
             type="text"
             placeholder="до"
-            pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"
+            // pattern="[+]?(?<!\.)\b[0-9]+\b(?!\.[0-9])"
             style={{float: "right"}}
             name="budget_max"
-            value={options.budget.max}
-            onChange={handleChangeInput}
-            required
+            value={budgetMax}
+            // onChange={handleChangeInput}
+            disabled
           />
         </fieldset>
 
@@ -164,7 +173,7 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
                     checked={options.sort === "name-ascending"}
                     onChange={handleChangeInput}
                   />
-                  <span className={`${s.custom_arrow} ${s.ascending}`} title="по возрастанию"></span>
+                  <span className={`${s.custom_arrow} ${s.ascending}`} title="А-Я"></span>
                   <span className="visually-hidden">Возрастанию</span>
                 </label>
                 <label>
@@ -176,7 +185,7 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
                     checked={options.sort === "name-descending"}
                     onChange={handleChangeInput}
                   />
-                  <span className={`${s.custom_arrow} ${s.descending}`} title="по убыванию"></span>
+                  <span className={`${s.custom_arrow} ${s.descending}`} title="Я-А"></span>
                   <span className="visually-hidden">Убыванию</span>
                 </label>
               </div>

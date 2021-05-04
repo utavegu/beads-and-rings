@@ -6,8 +6,6 @@ import productsData from '../../data/products.json';
 import { productTypeDict } from '../../common';
 
 export default function Catalog() {
-  // Данные хранятся в этом компоненте. И только состояние корзины глобально
-
   const [products, setProducts] = useState(productsData);
   const [view, setView] = useState("cards");
 
@@ -16,7 +14,7 @@ export default function Catalog() {
   const minPrice = Math.min(...allPrices);
   const maxPrice = Math.max(...allPrices);
 
-  const handleGetFilters = (filters) => {
+  const handleGetFilters = (filters, budgetMin, budgetMax) => {
     let categories = [];
     for (let category in filters.category) {      
       if (filters.category[category]) categories.push(productTypeDict[category]);
@@ -24,7 +22,7 @@ export default function Catalog() {
     const filtredProducts = productsData
       .slice()
       .filter(product => categories.includes(product.type))
-      .filter(product => product.price >= filters.budget.min && product.price <= filters.budget.max)
+      .filter(product => product.price >= budgetMin && product.price <= budgetMax)
       .sort((a, b) => {
         switch(filters.sort) {
           case 'name-ascending':

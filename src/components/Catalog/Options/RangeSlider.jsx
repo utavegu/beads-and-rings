@@ -36,15 +36,20 @@ const AirbnbSlider = withStyles({
 
 })(Slider);
 
+export default function CustomizedSlider({currentMin, currentMax, maxBudget, getCoordinates}) {
+  const [coords, setCoords] = React.useState([currentMin, currentMax]);
+  const handleChange = (evt, coord) => {
+    setCoords(coord);
+    getCoordinates(coord);
+  }
 
-
-export default function CustomizedSlider({currentMin, currentMax, maxBudget}) {
   return (
     <AirbnbSlider
       getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
-      value={[currentMin, currentMax]}
+      value={coords}
       min={0}
       max={maxBudget}
+      onChange={handleChange}
     />
   );
 }
