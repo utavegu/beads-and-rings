@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import s from './OrderForm.module.css';
-import Button from '../Button'
+import Button from '../Button';
+import Modal from '../Modal';
+import { useHistory } from 'react-router';
 
 const initialState = {
   name: '',
@@ -12,7 +14,10 @@ const initialState = {
 }
 
 function OrderForm({cart, addToCart}) {
-  let [form, setForm] = React.useState(initialState);
+  let [form, setForm] = useState(initialState);
+  const [modalActive, setModalActive] = useState(false);
+
+  const history = useHistory();
 
   const handleChange = ({target}) => {
     setForm(prevForm => ({...prevForm, [target.name]: target.value}));
@@ -23,17 +28,18 @@ function OrderForm({cart, addToCart}) {
     const order = {
       form: form,
       cart: cart,
-    } // вот этот товарищ, в идеале, улетает на сервер или на почту
-    console.log(order);
-    
-    setForm(initialState);
-    addToCart([]);
-    alert("Спасибо, мы свяжемся с вами ближайшее время и обсудим детали получения заказа!"); // МОДАЛКА!
-    // Пуш в каталог через хистори, через 3 секунды
+    }; // вот этот товарищ, в идеале, улетает на сервер или на почту    
+    setModalActive(true);
+    setTimeout(() => {
+      setForm(initialState);
+      addToCart([]);
+      setModalActive(false);
+      history.push('/');
+    }, 3000);
   }
   
   return (
-    <section className={s.order}>
+    <section className={s.order}>      
       <h3>Оформить заказ</h3>
         <form onSubmit={handleSubmit}>
           <p>
@@ -44,7 +50,7 @@ function OrderForm({cart, addToCart}) {
               id="name"
               name="name"
               value={form.name}
-              placeholder="Мой господин"
+              placeholder="Имя"
             />
           </p>
           <p>
@@ -68,7 +74,7 @@ function OrderForm({cart, addToCart}) {
               id="email"
               name="email"
               value={form.email}
-              placeholder="Почта"
+              placeholder="Адрес электронной почты"
               required
             />
           </p>
@@ -100,13 +106,14 @@ function OrderForm({cart, addToCart}) {
             </select>
           </p>
 
-          {/* ТУТ */}
-
           <p>
             {/* <Button type="reset">Сброс</Button> */}
             <Button type="submit">Оформить</Button>
           </p>
         </form>
+        <Modal active={modalActive} setActive={setModalActive}>
+          <p>Ваш заказ отправлен! Мы свяжемся с вами ближайшее время и обсудим детали получения заказа.</p>
+        </Modal>
     </section>
   )
 }
