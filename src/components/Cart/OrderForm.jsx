@@ -16,6 +16,7 @@ const initialState = {
 function OrderForm({cart, addToCart}) {
   let [form, setForm] = useState(initialState);
   const [modalActive, setModalActive] = useState(false);
+  const [notValid, setNotValid] = useState(false)
 
   const history = useHistory();
 
@@ -28,20 +29,29 @@ function OrderForm({cart, addToCart}) {
     const order = {
       form: form,
       cart: cart,
-    }; // вот этот товарищ, в идеале, улетает на сервер или на почту    
+    }; // Вот этот товарищ, в идеале, улетает на сервер или на почту. Джейсон менять нельзя, ибо пока клиент не забрал товар - он на складе. И "базу данных" должен менять только сам владелец магазина (это памятка, чтобы я не забыл, почему так сделал). Реальную отправку реализую, когда решим с заказчиками, как они этого хотят.
     setModalActive(true);
     setTimeout(() => {
+      setModalActive(false);
       setForm(initialState);
       addToCart([]);
-      setModalActive(false);
       history.push('/');
     }, 3000);
+  }
+
+  const handleInvalid = () => {
+    setNotValid(true);
+    setTimeout(() => setNotValid(false), 1100);
   }
   
   return (
     <section className={s.order}>      
       <h3>Оформить заказ</h3>
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          onInvalid={handleInvalid}
+          className={notValid ? `${s.not_valid}` : ''}
+        >
           <p>
             <label htmlFor="name">Как к вам обращаться?</label>
             <input

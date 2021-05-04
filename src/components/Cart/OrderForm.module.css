@@ -4,6 +4,17 @@
   padding: 5px;
 }
 
+@keyframes ignition {
+  0%, 100% { filter: drop-shadow(0 0 5px darkviolet) drop-shadow(0 0 10px red); }
+  20%, 40%, 60%, 80% { filter: drop-shadow(0 0 7px darkviolet) drop-shadow(0 0 15px red); }
+  10%, 30%, 50%, 70%, 90% { filter: drop-shadow(0 0 10px darkviolet) drop-shadow(0 0 20px red); }
+}
+
+.not_valid {
+  animation-name: ignition;
+  animation-duration: 1s;
+}
+
 .order label {
   color: #b2a17a;
   display: block;
