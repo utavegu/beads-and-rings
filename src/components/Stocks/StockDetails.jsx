@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './StocksDetails.module.css';
+import PropTypes from 'prop-types';
 
-export default function StockDetails({stock}) {
+function StockDetails({stock}) {
   return (
     <div className={s.details}>
       <h3>{stock.label}</h3>
@@ -9,3 +10,9 @@ export default function StockDetails({stock}) {
     </div>
   )
 }
+
+StockDetails.propTypes = {
+  stock: PropTypes.object.isRequired,
+}
+
+export default StockDetails;

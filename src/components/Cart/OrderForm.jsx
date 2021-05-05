@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import s from './OrderForm.module.css';
 import Button from '../Button';
 import Modal from '../Modal';
@@ -129,7 +129,8 @@ function OrderForm({cart, addToCart}) {
 }
 
 OrderForm.propTypes = {
-
+  cart: PropTypes.arrayOf(PropTypes.object).isRequired,
+  addToCart: func.isRequired,
 }
 
 export default OrderForm

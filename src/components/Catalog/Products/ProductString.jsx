@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import s from './ProductString.module.css';
+import PropTypes from 'prop-types';
 
-export default function ProductString({item}) {
+function ProductString({item}) {
   return (
     <li className={item.isNew ? `${s.product_string} ${s.new}` : `${s.product_string}`}>
       <div className={s.string_presentation}>
@@ -16,3 +17,9 @@ export default function ProductString({item}) {
     </li>
   )
 }
+
+ProductString.propTypes = {
+  item: PropTypes.object.isRequired,
+};
+
+export default ProductString;

@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './Button.module.css';
+import PropTypes from 'prop-types';
 
-export default function Button({type, children, isDisabled, onClick}) {
+function Button({type, children, isDisabled, onClick}) {
   return (
     <button 
       className={s.button}
@@ -13,3 +14,11 @@ export default function Button({type, children, isDisabled, onClick}) {
     </button>
   )
 }
+
+Button.propTypes = {
+  type: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  onClick: PropTypes.func,
+}
+
+export default Button;

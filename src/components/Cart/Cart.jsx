@@ -15,7 +15,6 @@ export default function Cart() {
   }
 
   return (
-    
     <section className={s.cart}>
       <h2 className="visually-hidden">Корзина</h2>
       <section>

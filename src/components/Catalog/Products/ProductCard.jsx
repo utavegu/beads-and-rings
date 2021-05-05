@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import s from './ProductCard.module.css';
+import PropTypes from 'prop-types';
 
-export default function ProductCard({item}) {
+function ProductCard({item}) {
   return (
     <li className={item.isNew ? `${s.product_card} ${s.new}` : `${s.product_card}`}>
       <div className={s.card_presentation}>
@@ -18,3 +19,9 @@ export default function ProductCard({item}) {
     </li>
   )
 }
+
+ProductCard.propTypes = {
+  item: PropTypes.object.isRequired,
+};
+
+export default ProductCard;
