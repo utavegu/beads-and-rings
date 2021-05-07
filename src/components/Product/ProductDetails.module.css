@@ -50,6 +50,14 @@
   margin-bottom: 10px;
 }
 
+.crafter {
+  color: #fff;
+}
+
+.crafter:hover {
+  color: #b2a17a;
+}
+
 .size_chooser {
   color: #fff;
   margin-right: 10px;

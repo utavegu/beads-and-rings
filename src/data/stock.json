@@ -2,25 +2,25 @@
   {
     "id": 0,
     "label": "При заказе от 3000 рублей доставка бесплатно",
-    "imgPath": "./img/delivery.webp",
+    "imgPath": "./img/stocks/delivery.webp",
     "description": "Бла-бла-бла, бла-бла-бла, бла-бла-бла про ДОСТАВКУ"
   },
   {
     "id": 1,
     "label": "Именинникам скидка 10%!",
-    "imgPath": "./img/birthday.jpg",
+    "imgPath": "./img/stocks/birthday.jpg",
     "description": "Бла-бла-бла, бла-бла-бла, бла-бла-бла про ДНИ РОЖДЕНИЯ"
   },
   {
     "id": 2,
     "label": "Создаём изделия под заказ",
-    "imgPath": "./img/sketch.jpg",
+    "imgPath": "./img/stocks/sketch.jpg",
     "description": "Бла-бла-бла, бла-бла-бла, бла-бла-бла про ЛЮБОЙ КАПРИЗ ЗА ВАШИ ДЕНЬГИ"
   },
   {
     "id": 3,
     "label": "Программы лояльности для оптовиков и постоянных клиентов!",
-    "imgPath": "./img/friends_source.jpeg",
+    "imgPath": "./img/stocks/friends_source.jpeg",
     "description": "Бла-бла-бла, бла-бла-бла, бла-бла-бла про ОПТОВИКОВ И ПОСТОЯННЫХ КЛИЕНТОВ"
   }
 ]

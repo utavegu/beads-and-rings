@@ -11,6 +11,8 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
     category: {
       rings: true,
       beads: true,
+      pyrography: true,
+      teaHouses: true,
     },
     // Пока оставлю, на всякий случай, вдруг передумаю
     // budget: {

@@ -58,6 +58,8 @@ function ProductDetails({product, history}) {
         <dl>
           <dt>Описание:</dt>
           <dd>{product.description}</dd>
+          <dt>Творец:</dt>
+          <dd><a className={s.crafter} href={product.crafter.link} target="_blank" rel="noreferrer">{product.crafter.name}</a></dd>
           <dt>Цена:</dt>
           <dd>{product.price} руб.</dd>
           <dt>Тип:</dt>

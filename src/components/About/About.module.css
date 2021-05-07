@@ -15,6 +15,7 @@
 	padding-left: 15px;
   font-size: 1.5em;
 	margin-left: 50%;
+  margin-bottom: 20px;
 }
 
 .about p {
@@ -71,7 +72,8 @@
     float: left;
   }
 
-  .archer {
+  .archer,
+  .batty {
     float: right;
   }
 
