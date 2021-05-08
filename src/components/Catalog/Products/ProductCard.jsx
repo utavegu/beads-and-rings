@@ -13,7 +13,7 @@ function ProductCard({item}) {
         <Link to={`/${item.id}`}>Посмотреть товар</Link>
       </div>
       <div>
-        <h3 className={s.product_name}>{item.name}</h3>
+        <h3 className={s.product_name}><Link to={`/${item.id}`}>{item.name}</Link></h3>
         <p>{item.price} &#8381;</p>
       </div>
     </li>

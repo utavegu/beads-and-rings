@@ -44,8 +44,6 @@ function ProductDetails({product, history}) {
     history.push("/cart");
   }
 
-  console.log(product.type);
-
   return (
     <>
       <h2 className={s.product_heading}>{product.name}</h2>
@@ -74,13 +72,13 @@ function ProductDetails({product, history}) {
           <dd>{product.color.join(", ")}</dd>
           <dt>Размер{(product.type === "Кольцо") && <sup title="Чтобы узнать ваш размер, обмотайте нужный палец ниткой, затем линейкой замерьте полученную длину нитки в милиметрах">*</sup>}:</dt>
           <dd>{product.sizes.map(o => 
-            <span
+            <button
               className={`${s.size_chooser} ${(o.size === selectedSize) && s.selected_size}`}
               onClick={() => handleChooseSize(o.size)}
               key={o.size}
             >
               {o.size}
-            </span>)}
+            </button>)}
           </dd>
           <dt>Количество:</dt>
           <dd>

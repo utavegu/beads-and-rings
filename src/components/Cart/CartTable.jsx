@@ -96,7 +96,7 @@ function CartTable({cart, addToCart}) {
           <td colSpan="5" style={{textAlign: "right"}}>Общая стоимость:</td>
           <td>{total} руб.</td>
           <td>
-            <button className={s.button_clear} onClick={handleClearCart} title="Очистить корзину">
+            <button className={s.button_clear} onClick={handleClearCart} title="Очистить корзину" tabIndex="0">
               <span className="visually-hidden">Очистить корзину</span>
             </button>
           </td>

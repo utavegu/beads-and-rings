@@ -62,6 +62,9 @@
   color: #fff;
   margin-right: 10px;
   cursor: pointer;
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
 }
 
 .size_chooser:hover {
