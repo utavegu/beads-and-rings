@@ -43,6 +43,14 @@ function OrderForm({cart, addToCart}) {
     setNotValid(true);
     setTimeout(() => setNotValid(false), 1100);
   }
+
+  const handleInput = ({target}) => {
+    if (target.validity.patternMismatch) {
+      target.setCustomValidity('Введите телефон!');
+    } else {
+      target.setCustomValidity('');
+    }
+  }
   
   return (
     <section className={s.order}>      
@@ -67,6 +75,7 @@ function OrderForm({cart, addToCart}) {
             <label htmlFor="phone">Телефон</label>
             <input
               onChange={handleChange}
+              onInput={handleInput}
               type="tel"
               id="phone"
               name="phone"

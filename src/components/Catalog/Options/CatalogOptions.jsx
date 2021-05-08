@@ -6,6 +6,11 @@ import PropTypes from 'prop-types';
 
 function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) {
 
+  /*
+  Вообще, сейчас мне уже совсем не нравится, как я реализовал этот компонент - стейты всем нужно было отдельные сделать, каждый отдельный фильтр разбить на подкомпоненты, лифтинг стейт ап делать через чейндж, а категории и прочие фильтры тащить с сервера / из джейсона, а не хардкодить тут. Но сейчас уже переделывать не буду, просто оставлю тут для себя зарубку на будущее.
+  Переделал фильтры на лайв.
+  */
+
   const [options, setOptions] = useState({
     view: "cards",
     category: {
@@ -13,6 +18,7 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
       beads: true,
       pyrography: true,
       teaHouses: true,
+      other: true,
     },
     // Пока оставлю, на всякий случай, вдруг передумаю
     // budget: {
@@ -46,23 +52,25 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
     {...options, [name]: value};
 
     setOptions(newState);
+    handleGetFilters(newState, budgetMin, budgetMax);
   };
 
   const getCoordinates = (coordinates) => {
     const [minCoord, maxCoord] = coordinates;
     setBudgetMin(minCoord);
     setBudgetMax(maxCoord);
+    handleGetFilters(options, minCoord, maxCoord);
   }
 
-  const handleSubmit = evt => {
-    evt.preventDefault();
-    handleGetFilters(options, budgetMin, budgetMax);
-  }
+  // const handleSubmit = evt => {
+  //   evt.preventDefault();
+  //   handleGetFilters(options, budgetMin, budgetMax);
+  // }
 
   return (
     <section className={s.options}>
 
-      <form onSubmit={handleSubmit}>
+      <form /*onSubmit={handleSubmit}*/>
 
         <fieldset className={s.presentation}>
           <legend>Представление</legend>
@@ -125,6 +133,45 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
                 />
                 <span className={s.custom_checkbox}></span>
                 <span>Изделия из бисера</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input 
+                  className="visually-hidden"
+                  type="checkbox"
+                  name="category_pyrography"
+                  checked={options.category.pyrography}
+                  onChange={handleChangeInput}
+                />
+                <span className={s.custom_checkbox}></span>
+                <span>Пирография</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input 
+                  className="visually-hidden"
+                  type="checkbox"
+                  name="category_teaHouses"
+                  checked={options.category.teaHouses}
+                  onChange={handleChangeInput}
+                />
+                <span className={s.custom_checkbox}></span>
+                <span>Чайные домики</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input 
+                  className="visually-hidden"
+                  type="checkbox"
+                  name="category_other"
+                  checked={options.category.other}
+                  onChange={handleChangeInput}
+                />
+                <span className={s.custom_checkbox}></span>
+                <span>Разное</span>
               </label>
             </li>
           </ul>
@@ -224,7 +271,10 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
           </ul>
         </fieldset>
 
-        <Button type="submit">Применить фильтры</Button>
+        {/* 
+        Блин, никто не видит эту кнопку... ну ладно, будут вам лайв-фильтры
+        <Button type="submit">Применить фильтры</Button> 
+        */}
 
       </form>
 

@@ -15,6 +15,11 @@ function Button({type, children, isDisabled, onClick}) {
   )
 }
 
+Button.defaultProps = {
+  type: "button",
+  isDisabled: false,
+}
+
 Button.propTypes = {
   type: PropTypes.string,
   isDisabled: PropTypes.bool,

@@ -10,6 +10,8 @@ import ProductPage from "./components/Product/ProductPage";
 import Page404 from "./components/Page404/Page404";
 import { setCartData } from "./common";
 
+// import {HashRouter as Router, Route, Switch} from 'react-router-dom'; Для деплоя на gh-pages
+
 function App() {
   
   if (!localStorage.hasOwnProperty('cart')) setCartData([]);

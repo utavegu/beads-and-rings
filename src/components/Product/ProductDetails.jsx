@@ -44,6 +44,8 @@ function ProductDetails({product, history}) {
     history.push("/cart");
   }
 
+  console.log(product.type);
+
   return (
     <>
       <h2 className={s.product_heading}>{product.name}</h2>
@@ -70,7 +72,7 @@ function ProductDetails({product, history}) {
           <dd>{product.materials.join(", ")}</dd>
           <dt>Цвет:</dt>
           <dd>{product.color.join(", ")}</dd>
-          <dt>Размер<sup title="Чтобы узнать ваш размер, обмотайте нужный палец ниткой, затем линейкой замерьте полученную длину нитки в милиметрах">*</sup>:</dt>
+          <dt>Размер{(product.type === "Кольцо") && <sup title="Чтобы узнать ваш размер, обмотайте нужный палец ниткой, затем линейкой замерьте полученную длину нитки в милиметрах">*</sup>}:</dt>
           <dd>{product.sizes.map(o => 
             <span
               className={`${s.size_chooser} ${(o.size === selectedSize) && s.selected_size}`}

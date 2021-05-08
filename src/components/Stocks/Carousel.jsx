@@ -73,7 +73,7 @@ function SwipeableTextMobileStepper({stocksInfo, onChangeStock: handleChangeStoc
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-        interval={3000}
+        interval={4000}
       >
         {stocksInfo.map((step, index) => (
           <div key={step.id}>

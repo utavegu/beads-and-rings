@@ -4,7 +4,7 @@
     "name": "Бурый медведь в горах",
     "type": "Пирография",
     "photo": "./img/content/wild-bear.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1000,
     "sizes": [
       {"size": "Диаметр 15 см","quantity": 1}
@@ -21,9 +21,9 @@
   {
     "id": 1,
     "name": "Лесные чайные домики",
-    "type": "Пирография",
+    "type": "Чайные домики",
     "photo": "./img/content/wood-tea-homes.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 750,
     "sizes": [
       {"size": "Высота 35 см","quantity": 2}
@@ -42,7 +42,7 @@
     "name": "Синее кольцо",
     "type": "Кольцо",
     "photo": "./img/content/ring-blue.jpg",
-    "description": "---------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1500,
     "sizes": [
       {"size": "15","quantity": 1},
@@ -63,7 +63,7 @@
     "name": "Шкатулка друида",
     "type": "Разное",
     "photo": "./img/content/box.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1000,
     "sizes": [
       {"size": "30 x 15 x 20 см.","quantity": 4}
@@ -82,7 +82,7 @@
     "name": "Серьги 'Мандала'",
     "type": "Разное",
     "photo": "./img/content/mandala-earrings.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 850,
     "sizes": [
       {"size": "6 см","quantity": 1}
@@ -101,7 +101,7 @@
     "name": "Чайный домик 'Лаванда'",
     "type": "Чайные домики",
     "photo": "./img/content/lavender-tea-homes.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 600,
     "sizes": [
       {"size": "Высота 35 см","quantity": 1}
@@ -120,7 +120,7 @@
     "name": "Изумрудное кольцо",
     "type": "Кольцо",
     "photo": "./img/content/ring-emerald.jpg",
-    "description": "---------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1500,
     "sizes": [
       {"size": "18","quantity": 3},
@@ -141,7 +141,7 @@
     "name": "Совушка",
     "type": "Пирография",
     "photo": "./img/content/owly.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 850,
     "sizes": [
       {"size": "Диаметр 12 см","quantity": 1}
@@ -160,7 +160,7 @@
     "name": "Золотистое кольцо",
     "type": "Кольцо",
     "photo": "./img/content/ring-gold.jpg",
-    "description": "---------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1500,
     "sizes": [
       {"size": "16.5","quantity": 1},
@@ -180,7 +180,7 @@
     "name": "Младенец Йода",
     "type": "Пирография",
     "photo": "./img/content/baby-yoda.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 850,
     "sizes": [
       {"size": "Диаметр 20 см","quantity": 1}
@@ -199,7 +199,7 @@
     "name": "Розовое кольцо",
     "type": "Кольцо",
     "photo": "./img/content/ring-pink.jpg",
-    "description": "---------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1500,
     "sizes": [
       {"size": "15.5","quantity": 2},
@@ -220,7 +220,7 @@
     "name": "Бог-медведь",
     "type": "Пирография",
     "photo": "./img/content/god-bear.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1250,
     "sizes": [
       {"size": "Диаметр 15 см","quantity": 1}
@@ -239,7 +239,7 @@
     "name": "Фиолетовое кольцо",
     "type": "Кольцо",
     "photo": "./img/content/ring-violet.jpg",
-    "description": "---------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1500,
     "sizes": [
       {"size": "21","quantity": 1}
@@ -258,7 +258,7 @@
     "name": "Луна",
     "type": "Пирография",
     "photo": "./img/content/luna.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 900,
     "sizes": [
       {"size": "Диаметр 15 см","quantity": 1}
@@ -277,7 +277,7 @@
     "name": "Тоторо",
     "type": "Пирография",
     "photo": "./img/content/totoro.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 800,
     "sizes": [
       {"size": "40 x 25 см.","quantity": 1}
@@ -296,7 +296,7 @@
     "name": "Маленький Грут",
     "type": "Пирография",
     "photo": "./img/content/baby-grut.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 700,
     "sizes": [
       {"size": "50 x 30 см.","quantity": 1}
@@ -315,7 +315,7 @@
     "name": "Седой Урал",
     "type": "Разное",
     "photo": "./img/content/gray-hair-Ural.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 800,
     "sizes": [
       {"size": "Диаметр 15 см","quantity": 1}
@@ -334,7 +334,7 @@
     "name": "Загадочное кольцо",
     "type": "Кольцо",
     "photo": "./img/content/ring-mysterious.jpg",
-    "description": "---------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1500,
     "sizes": [
       {"size": "20.5","quantity": 2},
@@ -354,7 +354,7 @@
     "name": "Лисичка",
     "type": "Пирография",
     "photo": "./img/content/foxy.jpg",
-    "description": "--------------------",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "price": 1000,
     "sizes": [
       {"size": "Диаметр 15 см","quantity": 1}
@@ -362,6 +362,44 @@
     "materials": ["дерево", "пирография"],
     "weight": 250.00,
     "color": ["тёмно-коричневый", "чёрный"],
+    "isNew": true,
+    "crafter": {
+      "name": "Екатерина",
+      "link": "https://vk.com/ekaterina_bebik"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Вечный календарь",
+    "type": "Разное",
+    "photo": "./img/content/perpetual-calendar.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 750,
+    "sizes": [
+      {"size": "60 x 35 см.","quantity": 3}
+    ],
+    "materials": ["дерево", "пирография"],
+    "weight": 600.00,
+    "color": ["белый", "чёрный"],
+    "isNew": false,
+    "crafter": {
+      "name": "Екатерина",
+      "link": "https://vk.com/ekaterina_bebik"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Дракот",
+    "type": "Пирография",
+    "photo": "./img/content/dracat.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 650,
+    "sizes": [
+      {"size": "50 x 35 см.","quantity": 1}
+    ],
+    "materials": ["дерево", "пирография"],
+    "weight": 270.00,
+    "color": ["серый", "бирюзовый"],
     "isNew": true,
     "crafter": {
       "name": "Екатерина",
