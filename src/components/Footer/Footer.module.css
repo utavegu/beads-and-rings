@@ -84,11 +84,13 @@
 
 .payment_header {
   text-align: center;
+  font-size: 18px;  
 }
 
 .pay {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .pay_systems {

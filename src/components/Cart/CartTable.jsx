@@ -88,7 +88,7 @@ function CartTable({cart, addToCart}) {
           <th scope="col">Кол-во</th>
           <th scope="col">Цена</th>
           <th scope="col">Итого</th>
-          <th scope="col">Действия</th>
+          <th className={s.not_mobile} scope="col">Действия</th>
         </tr>
       </thead>
       <tfoot>

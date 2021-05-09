@@ -80,6 +80,10 @@
   box-shadow: 0 0 5px 3px #ff000060;
 }
 
+.budget {
+  padding: 20px;
+}
+
 .budget input {
   width: 45%;
   border: none;

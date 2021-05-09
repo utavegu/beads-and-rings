@@ -37,14 +37,20 @@ html {
 
 body {
   font-family: "Newerwinter", "Luminari", fantasy;
-  font-size: 24px;
+  font-size: 18px;
   margin: 0 auto;
-  min-width: 320px;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 1200px) {
   body {
-    width: 1200px;
+    font-size: 24px;
+    max-width: 1250px;
     background-image: url(./img/pattern-728509.svg);
     background-size: cover;
     background-repeat: no-repeat;

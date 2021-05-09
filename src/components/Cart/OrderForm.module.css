@@ -21,6 +21,12 @@
   text-align: center;
 }
 
+.order select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .order input,
 .order select {
   width: 300px;
