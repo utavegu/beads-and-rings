@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import s from './ProductDetails.module.css';
 import Button from '../Button';
 import { getCartData } from '../../common';
-import CartContext from '../../contexts/CartContext'
+import CartContext from '../../contexts/CartContext';
 
 function ProductDetails({product, history}) {
-
   const [selectedSize, setSelectedSize] = useState(null);
   const [amountThisSize, setAmountThisSize] = useState(null)
   const {addToCart} = useContext(CartContext);
@@ -120,4 +119,3 @@ ProductDetails.propTypes = {
 }
 
 export default ProductDetails
-

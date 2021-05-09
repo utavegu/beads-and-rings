@@ -1,7 +1,6 @@
 .cart {
   background-color: #b2a17a;
-  min-height: 400px; /*ВРЕМЕННО*/
-  /* background-color: floralwhite; */
+  min-height: 400px; 
 }
 
 .cart h3 {

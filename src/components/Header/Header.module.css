@@ -32,7 +32,6 @@
   margin: 0;
   padding: 0;
   font-size: 36px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -64,7 +63,6 @@
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   align-self: flex-end;
-
   display: block;
   background-image: url(../../img/icons/shopping_basket_white_48dp.svg);
   background-repeat: no-repeat;
@@ -72,7 +70,6 @@
   width: 48px;
   height: 48px;
   filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 3px darkviolet);
-
   position: relative;
 }
 
@@ -81,14 +78,12 @@
   border-radius: 50%;
   width: 25px;
   height: 25px;
-
   position: absolute;
   text-align: center;
   top: 80%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +94,6 @@
   padding: 0 0 8px 0;
   color: #fff;
 }
-
 
 @media (min-width: 768px) {
   @keyframes wiggle {
@@ -120,8 +114,4 @@
     animation-name: wiggle;
     animation-duration: 5s;
   }
-}
-
-@media (min-width: 1200px) {
- 
 }

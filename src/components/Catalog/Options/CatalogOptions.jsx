@@ -1,16 +1,13 @@
 import React, {useState} from 'react';
-import Button from '../../Button';
 import s from './CatalogOptions.module.css';
 import RangeSlider from './RangeSlider.jsx';
 import PropTypes from 'prop-types';
 
 function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) {
-
   /*
   Вообще, сейчас мне уже совсем не нравится, как я реализовал этот компонент - стейты всем нужно было отдельные сделать, каждый отдельный фильтр разбить на подкомпоненты, лифтинг стейт ап делать через чейндж, а категории и прочие фильтры тащить с сервера / из джейсона, а не хардкодить тут. Но сейчас уже переделывать не буду, просто оставлю тут для себя зарубку на будущее.
   Переделал фильтры на лайв.
   */
-
   const [options, setOptions] = useState({
     view: "cards",
     category: {

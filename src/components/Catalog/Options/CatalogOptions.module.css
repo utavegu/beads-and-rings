@@ -17,9 +17,6 @@
   padding: 0;
 }
 
-
-
-
 .presentation {
   display: none;
 }
@@ -60,9 +57,6 @@
   box-shadow: 0 0 5px 3px #ff000060;
 }
 
-
-
-
 .category label {
   display: flex;
   justify-content: space-between;
@@ -86,9 +80,6 @@
   box-shadow: 0 0 5px 3px #ff000060;
 }
 
-
-
-
 .budget input {
   width: 45%;
   border: none;
@@ -101,10 +92,8 @@
 }
 
 .budget input::placeholder {
-  
   color: #fff;
 }
-
 
 .sort {
   margin-bottom: 10px;
@@ -143,12 +132,6 @@
   outline: none;
   box-shadow: 0 0 5px 3px #ff000060;
 }
-
-
-
-
-
-
 
 @media (min-width: 768px) { 
   .options {

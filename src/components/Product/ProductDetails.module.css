@@ -15,8 +15,6 @@
   margin: 0 auto;
 }
 
-/* Не забудь тут с обджект-фитом пошаманить, когда контент будет */
-
 .product_photo img {
   margin: 0 auto;
   display: block;
@@ -126,7 +124,4 @@
     width: 100%;
     padding: 10px;
   }
-}
-
-@media (min-width: 1200px) {
 }

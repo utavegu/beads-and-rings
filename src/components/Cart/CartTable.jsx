@@ -122,4 +122,3 @@ CartTable.propTypes = {
 }
 
 export default CartTable
-

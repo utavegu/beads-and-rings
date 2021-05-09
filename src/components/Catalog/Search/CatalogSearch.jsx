@@ -3,7 +3,6 @@ import s from './CatalogSearch.module.css';
 import PropTypes from 'prop-types';
 
 function CatalogSearch({queryString, setSearchQuery}) {
-  
   const handleQuery = ({target}) => {
     setSearchQuery(target.value);
   }

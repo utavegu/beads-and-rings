@@ -126,7 +126,6 @@ function OrderForm({cart, addToCart}) {
           </p>
 
           <p>
-            {/* <Button type="reset">Сброс</Button> */}
             <Button type="submit">Оформить</Button>
           </p>
         </form>
@@ -143,4 +142,3 @@ OrderForm.propTypes = {
 }
 
 export default OrderForm
-

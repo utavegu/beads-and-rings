@@ -131,10 +131,6 @@
   display: none;
 }
 
-
-
-
-
 @media (min-width: 768px) {
   .footer {
     grid-template-columns: repeat(2, 1fr);
@@ -163,5 +159,4 @@
   .footer {
     grid-template-columns: repeat(4, 1fr);
   }
- 
 }

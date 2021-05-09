@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import s from './Header.module.css';
 import logo from '../../img/wizard-hat.png';
-import CartContext from '../../contexts/CartContext'
+import CartContext from '../../contexts/CartContext';
 
 export default function Header() {
   const {cart} = useContext(CartContext);
@@ -17,7 +17,6 @@ export default function Header() {
       <h1 className="visually-hidden">Интернет-магазин титановых колец и изделий из бисера</h1>
 
       <Link to="/" className={s.logo} exact>
-        {/* Логотип адаптивный - 3 вида... Впрочем, надо ли? */}
         <img src={logo} width="200" height="179" alt="Логотип сайта"/>
       </Link>
 
@@ -45,4 +44,3 @@ export default function Header() {
     </header>
   )
 }
-

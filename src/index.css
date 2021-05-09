@@ -25,13 +25,6 @@
   url("./fonts/BalsamiqSans-Bold.woff") format("woff");
 }
 
-/*
-font-family: 'BalsamiqSans-Bold';
-font-family: 'BalsamiqSans-BoldItalic';
-font-family: 'BalsamiqSans-Italic';
-font-family: 'BalsamiqSans-Regular';
-*/
-
 html {
   box-sizing: border-box;
 }
