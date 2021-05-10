@@ -22,7 +22,7 @@ function CatalogOptions({onGetFilters: handleGetFilters, minBudget, maxBudget}) 
     //   min: minBudget,
     //   max: maxBudget,
     // },
-    sort: "name-ascending",
+    sort: "",
   })
   const [budgetMin, setBudgetMin] = useState(minBudget);
   const [budgetMax, setBudgetMax] = useState(maxBudget);

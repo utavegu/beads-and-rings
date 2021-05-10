@@ -26,10 +26,20 @@ export default function Catalog() {
       .sort((a, b) => {
         switch(filters.sort) {
           case 'name-ascending':
-            if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+            if ((navigator.userAgent.search(/Chrome/) > 0)) {
+              if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+            }
+            if ((navigator.userAgent.search(/Firefox/) > 0)) {
+              if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+            }
             break;
           case 'name-descending':
-            if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
+            if ((navigator.userAgent.search(/Chrome/) > 0)) {
+              if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
+            }
+            if ((navigator.userAgent.search(/Firefox/) > 0)) {
+              if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
+            }
             break;
           case 'price-ascending':
             return a.price-b.price;
