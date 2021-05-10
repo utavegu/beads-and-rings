@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/beads-and-rings/static/css/main.f9e590d3.chunk.css",
-    "main.js": "/beads-and-rings/static/js/main.9f277aa0.chunk.js",
-    "main.js.map": "/beads-and-rings/static/js/main.9f277aa0.chunk.js.map",
+    "main.css": "/beads-and-rings/static/css/main.b775e9a7.chunk.css",
+    "main.js": "/beads-and-rings/static/js/main.49f84a58.chunk.js",
+    "main.js.map": "/beads-and-rings/static/js/main.49f84a58.chunk.js.map",
     "runtime-main.js": "/beads-and-rings/static/js/runtime-main.8fba78d4.js",
     "runtime-main.js.map": "/beads-and-rings/static/js/runtime-main.8fba78d4.js.map",
-    "static/js/2.111f8f83.chunk.js": "/beads-and-rings/static/js/2.111f8f83.chunk.js",
-    "static/js/2.111f8f83.chunk.js.map": "/beads-and-rings/static/js/2.111f8f83.chunk.js.map",
+    "static/js/2.112ec5ef.chunk.js": "/beads-and-rings/static/js/2.112ec5ef.chunk.js",
+    "static/js/2.112ec5ef.chunk.js.map": "/beads-and-rings/static/js/2.112ec5ef.chunk.js.map",
     "index.html": "/beads-and-rings/index.html",
-    "static/css/main.f9e590d3.chunk.css.map": "/beads-and-rings/static/css/main.f9e590d3.chunk.css.map",
-    "static/js/2.111f8f83.chunk.js.LICENSE.txt": "/beads-and-rings/static/js/2.111f8f83.chunk.js.LICENSE.txt",
+    "static/css/main.b775e9a7.chunk.css.map": "/beads-and-rings/static/css/main.b775e9a7.chunk.css.map",
+    "static/js/2.112ec5ef.chunk.js.LICENSE.txt": "/beads-and-rings/static/js/2.112ec5ef.chunk.js.LICENSE.txt",
     "static/media/index.css": "/beads-and-rings/static/media/pattern-728509.39dd8d7f.svg",
-    "static/media/ProductString.module.css": "/beads-and-rings/static/media/zoom_in_black_48dp.58fd0cf4.svg",
     "static/media/archer_300x298.2b81875c.jpg": "/beads-and-rings/static/media/archer_300x298.2b81875c.jpg",
     "static/media/awards_1100x587.d0f0ca17.jpg": "/beads-and-rings/static/media/awards_1100x587.d0f0ca17.jpg",
     "static/media/awards_300x297.3cc43604.jpg": "/beads-and-rings/static/media/awards_300x297.3cc43604.jpg",
@@ -23,12 +22,13 @@
     "static/media/Header.module.css": "/beads-and-rings/static/media/shopping_basket_white_48dp.9b64ef82.svg",
     "static/media/ProductDetails.module.css": "/beads-and-rings/static/media/plus_24dp.8bae480d.svg",
     "static/media/About.module.css": "/beads-and-rings/static/media/scroll_1920.95f9096f.png",
-    "static/media/wizard-hat.e1f05698.png": "/beads-and-rings/static/media/wizard-hat.e1f05698.png"
+    "static/media/wizard-hat.e1f05698.png": "/beads-and-rings/static/media/wizard-hat.e1f05698.png",
+    "static/media/ProductString.module.css": "/beads-and-rings/static/media/zoom_in_black_48dp.58fd0cf4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8fba78d4.js",
-    "static/js/2.111f8f83.chunk.js",
-    "static/css/main.f9e590d3.chunk.css",
-    "static/js/main.9f277aa0.chunk.js"
+    "static/js/2.112ec5ef.chunk.js",
+    "static/css/main.b775e9a7.chunk.css",
+    "static/js/main.49f84a58.chunk.js"
   ]
 }
