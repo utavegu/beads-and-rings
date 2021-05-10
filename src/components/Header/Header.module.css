@@ -32,9 +32,6 @@
   margin: 0;
   padding: 0;
   font-size: 22px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .nav_item {
@@ -98,6 +95,9 @@
 @media (min-width: 768px) {
   .nav_list {
     font-size: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   @keyframes wiggle {

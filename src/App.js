@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import CartProvider from './providers/CartProvider'
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -9,8 +9,6 @@ import Cart from "./components/Cart/Cart";
 import ProductPage from "./components/Product/ProductPage";
 import Page404 from "./components/Page404/Page404";
 import { setCartData } from "./common";
-
-// import {HashRouter as Router, Route, Switch} from 'react-router-dom'; Для деплоя на gh-pages
 
 function App() {
   

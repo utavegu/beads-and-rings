@@ -2,7 +2,7 @@
   "name": "beads-and-rings",
   "version": "0.1.0",
   "private": true,
-  
+  "homepage": "https://utavegu.github.io/beads-and-rings",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
