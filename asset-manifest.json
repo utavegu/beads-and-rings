@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/beads-and-rings/static/css/main.b775e9a7.chunk.css",
-    "main.js": "/beads-and-rings/static/js/main.49f84a58.chunk.js",
-    "main.js.map": "/beads-and-rings/static/js/main.49f84a58.chunk.js.map",
+    "main.js": "/beads-and-rings/static/js/main.b11ce862.chunk.js",
+    "main.js.map": "/beads-and-rings/static/js/main.b11ce862.chunk.js.map",
     "runtime-main.js": "/beads-and-rings/static/js/runtime-main.8fba78d4.js",
     "runtime-main.js.map": "/beads-and-rings/static/js/runtime-main.8fba78d4.js.map",
     "static/js/2.112ec5ef.chunk.js": "/beads-and-rings/static/js/2.112ec5ef.chunk.js",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.8fba78d4.js",
     "static/js/2.112ec5ef.chunk.js",
     "static/css/main.b775e9a7.chunk.css",
-    "static/js/main.49f84a58.chunk.js"
+    "static/js/main.b11ce862.chunk.js"
   ]
 }
