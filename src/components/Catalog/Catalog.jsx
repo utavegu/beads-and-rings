@@ -26,28 +26,13 @@ export default function Catalog() {
       .sort((a, b) => {
         switch(filters.sort) {
           case 'name-ascending':
-            if ((navigator.userAgent.search(/Chrome/) > 0)) {
-              if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-            }
-            if ((navigator.userAgent.search(/Firefox/) > 0)) {
-              if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-            }
-            break;
+            return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
           case 'name-descending':
-            if ((navigator.userAgent.search(/Chrome/) > 0)) {
-              if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
-            }
-            if ((navigator.userAgent.search(/Firefox/) > 0)) {
-              if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
-            }
-            break;
+            return b.name.toLowerCase().localeCompare(a.name.toLowerCase());
           case 'price-ascending':
-            return a.price-b.price;
+            return a.price - b.price;
           case 'price-descending':
-            return b.price-a.price;
-          default:
-            console.log("Неправильные входные данные");
-            break;
+            return b.price - a.price;
         }
       })
     setProducts(filtredProducts);
