@@ -11,7 +11,7 @@ function CatalogProducts({items, view}) {
 
   const displayedItems = items
     .slice()
-    .filter(item => item.name.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1)
+    .filter(item => item.name.toLowerCase().indexOf(searchQuery.toLowerCase().trim()) > -1)
     .slice(0, displayStep);
 
   return (
